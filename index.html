@@ -114,6 +114,10 @@
             </div>
         </section>
 
+		<div id="scroll-down">
+			<img src="img/index/img-scrolldown.svg" width="49" height="40" alt="Scroll Down">
+		</div>
+		
         <!-- Youtube Section -->
         <section id="youtube" class="section youtube-section">
             <div class="container">
@@ -123,12 +127,12 @@
                         <div class="title-dot -sns"></div>
                         <h2 class="title-en -sub">YouTube</h2>
                     </div>
-                    <button class="view-more-btn">VIEW MORE</button>
+                    <button class="view-more-btn -spSmall"><a href="https://www.youtube.com/channel/UCCkcNNVdspO3gQvVC4I8uIg" target="_blank" rel="noopener noreferrer">VIEW MORE</a></button>
                 </div>
                 <div class="youtube-content">
                     <div class="youtube-content__inner">
                         <div class="youtube-content__video">
-                            <div id="latest-video">読み込み中...</div>
+                            <div id="latest-video" class="youtube-content__video-inner">読み込み中...</div>
                         </div>
                     </div>
                 </div>
@@ -144,7 +148,7 @@
                         <div class="title-dot -sns"></div>
                         <h2 class="title-en -sub">INSTAGRAM</h2>
                     </div>
-                    <button class="view-more-btn">VIEW MORE</button>
+                    <button class="view-more-btn -spSmall"><a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer">VIEW MORE</a></button>
                 </div>
                 <div class="instagram-content">
                     <div class="instagram-content__inner">
@@ -181,32 +185,42 @@
                     <div class="news-list">
                         <div class="news-item">
                             <span class="news-category">キャンペーン・フェア</span>
-                            <span class="news-date">2025.06.06</span>
-                            <h3 class="news-block-title">フマキラーキャンペーン実施中</h3>
+                            <div class="news-item-content">
+                                <span class="news-date">2025.06.06</span>
+                                <h3 class="news-block-title">フマキラーキャンペーン実施中</h3>
+                            </div>
                         </div>
 
                         <div class="news-item">
                             <span class="news-category">キャンペーン・フェア</span>
-                            <span class="news-date">2025.05.27</span>
-                            <h3 class="news-block-title">6月のポイントサービスデー</h3>
+                            <div class="news-item-content">
+                                <span class="news-date">2025.05.27</span>
+                                <h3 class="news-block-title">6月のポイントサービスデー</h3>
+                            </div>
                         </div>
 
                         <div class="news-item">
                             <span class="news-category">キャンペーン・フェア</span>
-                            <span class="news-date">2025.03.11</span>
-                            <h3 class="news-block-title">農業資材フェア第二弾開催中！</h3>
+                            <div class="news-item-content">
+                                <span class="news-date">2025.03.11</span>
+                                <h3 class="news-block-title">農業資材フェア第二弾開催中！</h3>
+                            </div>
                         </div>
 
                         <div class="news-item">
                             <span class="news-category">店舗からのお知らせ</span>
-                            <span class="news-date">2025.01.23</span>
-                            <h3 class="news-block-title">新南陽店 営業再開のお知らせ</h3>
+                            <div class="news-item-content">
+                                <span class="news-date">2025.01.23</span>
+                                <h3 class="news-block-title">新南陽店 営業再開のお知らせ</h3>
+                            </div>
                         </div>
 
                         <div class="news-item">
                             <span class="news-category">その他のお知らせ</span>
-                            <span class="news-date">2024.09.25</span>
-                            <h3 class="news-title">いきいきポイント付与ルール変更のお知らせ</h3>
+                            <div class="news-item-content">
+                                <span class="news-date">2024.09.25</span>
+                                <h3 class="news-block-title">いきいきポイント付与ルール変更のお知らせ</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -265,25 +279,172 @@
                         <!-- Left Panel: Map and Filters -->
                         <div class="shop-panel -left">
                             <!-- Prefecture Filters -->
-                            <div class="prefecture-section">
+                            <div class="prefecture-tabs">
+                                <button class="prefecture-tab active" data-tab="kinki">近畿地方</button>
+                                <button class="prefecture-tab" data-tab="chugoku">中国地方</button>
+                            </div>
+
+                            <div class="prefecture-section" data-tab-content="kinki">
                                 <h3 class="prefecture-title">近畿地方</h3>
                                 <div class="prefecture-buttons">
-                                    <button class="prefecture-btn active" data-prefecture="京都府">京都府</button>
-                                    <button class="prefecture-btn" data-prefecture="大阪府">大阪府</button>
-                                    <button class="prefecture-btn" data-prefecture="兵庫県">兵庫県</button>
-                                    <button class="prefecture-btn" data-prefecture="奈良県">奈良県</button>
-                                    <button class="prefecture-btn" data-prefecture="和歌山県">和歌山県</button>
+                                    <button class="prefecture-btn active" data-prefecture="京都府" data-image-index="01">
+                                        京都府
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="https://www.j-eshop.jp/shops/kyoto.html#264" target="_blank" data-store="西舞鶴モール店">西舞鶴モール店</a></h4>
+                                                <p class="store-postal">〒624-0831</p>
+                                                <p class="store-address">京都府舞鶴市女布2番172</p>
+                                                <p class="store-tel">0773-78-2050</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="https://www.j-eshop.jp/shops/kyoto.html#196" target="_blank" data-store="マイン峰山店">マイン峰山店</a></h4>
+                                                <p class="store-postal">〒627-0005</p>
+                                                <p class="store-address">京都府京丹後市峰山町新町1701番地</p>
+                                                <p class="store-tel">0772-69-2287</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="https://www.j-eshop.jp/shops/kyoto.html#116" target="_blank" data-store="網野店">網野店</a></h4>
+                                                <p class="store-postal">〒629-3113</p>
+                                                <p class="store-address">京都府京丹後市網野町小浜小字勝山78番地2</p>
+                                                <p class="store-tel">0772-79-2027</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="https://www.j-eshop.jp/shops/kyoto.html#254" target="_blank" data-store="福知山店">福知山店</a></h4>
+                                                <p class="store-postal">〒620-0926</p>
+                                                <p class="store-address">京都府福知山市新庄11番1</p>
+                                                <p class="store-tel">0773-25-2140</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="https://www.j-eshop.jp/shops/kyoto.html#175" target="_blank" data-store="綾部店">綾部店</a></h4>
+                                                <p class="store-postal">〒623-0011</p>
+                                                <p class="store-address">京都府綾部市青野町西中屋30番地</p>
+                                                <p class="store-tel">0773-40-2035</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#" target="_blank" data-store="xxxxxx">xxxxxx</a></h4>
+                                                <p class="store-postal">〒xxx-xxxx</p>
+                                                <p class="store-address">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                                                <p class="store-tel">xxxx-xx-xxxxx</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="大阪府" data-image-index="02">
+                                        大阪府
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="大阪本店">大阪本店</a></h4>
+                                                <p class="store-postal">〒530-0001</p>
+                                                <p class="store-address">大阪府大阪市北区梅田1-1-1</p>
+                                                <p class="store-tel">06-1234-5678</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="堺店">堺店</a></h4>
+                                                <p class="store-postal">〒590-0001</p>
+                                                <p class="store-address">大阪府堺市堺区大町1-1-1</p>
+                                                <p class="store-tel">072-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="兵庫県" data-image-index="03">
+                                        兵庫県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="神戸店">神戸店</a></h4>
+                                                <p class="store-postal">〒650-0001</p>
+                                                <p class="store-address">兵庫県神戸市中央区三宮町1-1-1</p>
+                                                <p class="store-tel">078-123-4567</p>
+                                            </div>
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="姫路店">姫路店</a></h4>
+                                                <p class="store-postal">〒670-0001</p>
+                                                <p class="store-address">兵庫県姫路市本町1-1-1</p>
+                                                <p class="store-tel">079-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="奈良県" data-image-index="04">
+                                        奈良県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="奈良店">奈良店</a></h4>
+                                                <p class="store-postal">〒630-0001</p>
+                                                <p class="store-address">奈良県奈良市登大路町1-1</p>
+                                                <p class="store-tel">0742-12-3456</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="和歌山県" data-image-index="05">
+                                        和歌山県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="和歌山店">和歌山店</a></h4>
+                                                <p class="store-postal">〒640-0001</p>
+                                                <p class="store-address">和歌山県和歌山市中央1-1-1</p>
+                                                <p class="store-tel">073-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
 
-                            <div class="prefecture-section">
+                            <div class="prefecture-section" data-tab-content="chugoku">
                                 <h3 class="prefecture-title">中国地方</h3>
                                 <div class="prefecture-buttons">
-                                    <button class="prefecture-btn" data-prefecture="鳥取県">鳥取県</button>
-                                    <button class="prefecture-btn" data-prefecture="島根県">島根県</button>
-                                    <button class="prefecture-btn" data-prefecture="岡山県">岡山県</button>
-                                    <button class="prefecture-btn" data-prefecture="広島県">広島県</button>
-                                    <button class="prefecture-btn" data-prefecture="山口県">山口県</button>
+                                    <button class="prefecture-btn" data-prefecture="鳥取県" data-image-index="06">
+                                        鳥取県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="鳥取店">鳥取店</a></h4>
+                                                <p class="store-postal">〒680-0001</p>
+                                                <p class="store-address">鳥取県鳥取市西町1-1-1</p>
+                                                <p class="store-tel">0857-12-3456</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="島根県" data-image-index="07">
+                                        島根県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="松江店">松江店</a></h4>
+                                                <p class="store-postal">〒690-0001</p>
+                                                <p class="store-address">島根県松江市朝日町1-1-1</p>
+                                                <p class="store-tel">0852-12-3456</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="岡山県" data-image-index="08">
+                                        岡山県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="岡山店">岡山店</a></h4>
+                                                <p class="store-postal">〒700-0001</p>
+                                                <p class="store-address">岡山県岡山市北区表町1-1-1</p>
+                                                <p class="store-tel">086-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="広島県" data-image-index="09">
+                                        広島県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="広島店">広島店</a></h4>
+                                                <p class="store-postal">〒730-0001</p>
+                                                <p class="store-address">広島県広島市中区本通1-1-1</p>
+                                                <p class="store-tel">082-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="prefecture-btn" data-prefecture="山口県" data-image-index="10">
+                                        山口県
+                                        <div class="store-data" style="display: none;">
+                                            <div class="store-item">
+                                                <h4 class="store-name"><a href="#store-detail" data-store="山口店">山口店</a></h4>
+                                                <p class="store-postal">〒753-0001</p>
+                                                <p class="store-address">山口県山口市中央1-1-1</p>
+                                                <p class="store-tel">083-123-4567</p>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
 
@@ -313,32 +474,64 @@
         </section>
 
         <!-- POINT CARD Section -->
-        <section id="point-card" class="section -over point-card-section">
+        <section id="point-card" class="section -over -right point-card-section">
             <div>
                 <!-- Title -->
-                <div class="links-header container">
-                    <div class="section-title">
-                        <div class="title-dot"></div>
-                        <h2 class="title-en">POINT CARD</h2>
-                        <span class="title-ja">ポイントカード</span>
-                    </div>
+                <div class="point-card-header container">
+					<div class="section-title">
+						<div class="title-dot-wrapper">
+							<div class="title-dot"></div>
+							<h2 class="title-en">POINT CARD</h2>
+						</div>
+						<span class="title-ja">ポイントカード</span>
+					</div>
+					<button class="view-more-btn pc-block">VIEW MORE</button>
                 </div>
 
                 <!-- Background wrapper same pattern as links -->
-                <div class="links-grid-wrapper">
-                    <div class="links-grid container">
-                        <img src="img/index/img-card01.webp" width="261" height="140" alt="">
-                        <img src="img/index/img-card02.webp" width="261" height="140" alt="">
-                        <img src="img/index/img-card03.webp" width="261" height="140" alt="">
-                        <img src="img/index/img-card04.webp" width="261" height="140" alt="">
-                        <img src="img/index/img-card05.webp" width="261" height="140" alt="">
+                <div class="point-card-grid-wrapper">
+                    <div class="point-card-grid container">
+                        <div class="point-card-new-member">
+                            <div class="point-card-new-member-text">
+                                <p>新規ご入会さま限定！</p>
+                                <img src="img/index/img-point-card-get.webp" width="408" height="98" alt="新規ご入会さま限定!最大7,000オリコポイントをプレゼント!">
+                            </div>
+                            <button class="view-more-btn"><a href="#" target="_blank" rel="noopener noreferrer"></a>詳しくはこちら</a></button>
+                        </div>
+                        <div class="point-card-new-member-pointCard">
+                            <div class="point-card-new-member-pointCard-content">
+                                <p>いきいきポイントカード</p>
+                                <img src="img/index/img-card01.webp" width="272" height="173" alt="">
+                                <span>入会金/年会費 無料</span>
+                            </div>
+                            <button class="view-more-btn"><a href="#" target="_blank" rel="noopener noreferrer"></a>詳しくはこちら</button>
+                        </div>
+                        <div class="point-card-new-member-craditCard">
+                            <div class="point-card-new-member-craditCard-item">
+								<p class="sp-block">ジュンテンドー<span>いきいきクレジットカード</span></p>
+                                <img src="img/index/img-card02.webp" width="200" height="128" alt="">
+                                <div class="point-card-new-member-craditCard-item-text">
+                                    <p class="pc-block">ジュンテンドー<span>いきいきクレジットカード</span></p>
+                                    <button class="view-more-btn -large point-card-btn"><a href="#" target="_blank" rel="noopener noreferrer">詳細・お申し込みはこちら</a></button>
+                                </div>
+                            </div>
+                            <div class="point-card-new-member-craditCard-item">
+								<p class="sp-block">個人事業主さま法人さま専用<span>いきいきBizカード</span></p>
+								<img src="img/index/img-card03.webp" width="200" height="128" alt="">
+                                <div class="point-card-new-member-craditCard-item-text">
+                                    <p class="pc-block">個人事業主さま法人さま専用<span>いきいきBizカード</span></p>
+                                    <button class="view-more-btn -large point-card-btn"><a href="#" target="_blank" rel="noopener noreferrer"></a>詳細・お申し込みはこちら</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
-                <div class="c-button-center">
-                    <button class="view-more-btn -under sp-block">VIEW MORE</button>
-                </div>
-            </div>
+				<div class="c-button-center">
+					<button class="view-more-btn -under sp-block">VIEW MORE</button>
+				</div>
+			</div>
         </section>
 
         <!-- LINKS Section -->
@@ -366,10 +559,6 @@
                         <img src="img/index/img-links07.webp" width="174" height="70" alt="">
                     </div>
                 </div>
-
-                <div class="c-button-center">
-                    <button class="view-more-btn -under sp-block">VIEW MORE</button>
-                </div>
             </div>
         </section>
 
@@ -378,8 +567,10 @@
             <div class="container">
                 <!-- Title -->
                 <div class="section-title -footer">
-                    <div class="title-dot"></div>
-                    <h2 class="title-en">COMPANY</h2>
+                    <div class="title-dot-wrapper">
+                        <div class="title-dot"></div>
+                        <h2 class="title-en">COMPANY</h2>
+                    </div>
                     <span class="title-ja">会社概要</span>
                 </div>
 
@@ -426,14 +617,14 @@
                     <!-- Social Media Links -->
                     <div class="social-links">
                         <!-- Facebook -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
                             <div class="social-icon">
                                 <img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
                             </div>
                         </a>
 
                         <!-- Instagram -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <div class="social-icon">
                                 <img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
                             </div>
@@ -480,8 +671,6 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Data -->
-    <script src="js/data.js"></script>
 
     <!-- Main Script -->
     <script src="js/main.js"></script>

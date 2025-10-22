@@ -87,7 +87,7 @@ $(document).ready(function() {
             const category = $(this).find('.news-category').text();
 
             if (currentFilter === '全て' || category === currentFilter) {
-                $(this).show();
+                $(this).show().css('display', 'flex');
             } else {
                 $(this).hide();
             }
@@ -95,7 +95,6 @@ $(document).ready(function() {
     }
 
 
-    let selectedPrefecture = '京都府';
 
     // 都道府県ボタン順に応じて画像切替（img-shopinfo01〜10）
     (function initShopInfoImageByButtons() {
@@ -112,8 +111,6 @@ $(document).ready(function() {
     })();
 
     $('.prefecture-btn').on('click', function() {
-        selectedPrefecture = $(this).data('prefecture');
-
         $('.prefecture-btn').removeClass('active');
         $(this).addClass('active');
 
@@ -125,24 +122,30 @@ $(document).ready(function() {
     });
 
     function updateStoreList() {
-        const stores = storeData[selectedPrefecture];
-        const storeCount = stores ? stores.length : 0;
+        const activeButton = $('.prefecture-btn.active');
+        const prefecture = activeButton.data('prefecture');
+        const storeData = activeButton.find('.store-data .store-item');
+        const storeCount = storeData.length;
 
-        $('#store-list-title').text(`${selectedPrefecture}（${storeCount}店舗）`);
+        $('#store-list-title').text(`${prefecture}（${storeCount}店舗）`);
 
         let html = '';
-        if (stores) {
-            stores.forEach((store, index) => {
-                const borderClass = index < stores.length - 1 ? 'border-bottom' : '';
-                html += `
+        storeData.each(function(index) {
+            const $store = $(this);
+            const storeNameLink = $store.find('.store-name').html();
+            const storePostal = $store.find('.store-postal').text();
+            const storeAddress = $store.find('.store-address').text();
+            const storeTel = $store.find('.store-tel').text();
+            const borderClass = index < storeCount - 1 ? 'border-bottom' : '';
+            
+            html += `
           <div class="store-item ${borderClass}">
-            <h4 class="store-name">${store.name}</h4>
-            <p class="store-info">${store.postal}　${store.address}</p>
-            <p class="store-info">TEL：${store.tel}</p>
+            <h4 class="store-name">${storeNameLink}</h4>
+            <p class="store-info">${storePostal}　${storeAddress}</p>
+            <p class="store-info">TEL：${storeTel}</p>
           </div>
         `;
-            });
-        }
+        });
 
         $('#store-list').html(html);
     }
@@ -165,6 +168,24 @@ $(document).ready(function() {
 
     $('#scroll-to-top').on('click', function() {
         $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+
+    // Prefecture tabs functionality
+    $('.prefecture-tab').on('click', function() {
+        const tabId = $(this).data('tab');
+
+        // Remove active class from all tabs
+        $('.prefecture-tab').removeClass('active');
+        // Add active class to clicked tab
+        $(this).addClass('active');
+
+        // Hide all tab content
+        $('[data-tab-content]').hide();
+        // Show selected tab content
+        $(`[data-tab-content="${tabId}"]`).show();
+
+        // Reset prefecture buttons to first one and trigger click
+        $(`[data-tab-content="${tabId}"] .prefecture-btn`).removeClass('active').first().addClass('active').trigger('click');
     });
 
 });

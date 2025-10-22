@@ -20,6 +20,7 @@
                     color: #333;
                     background-color: #fff;
                     min-height: 100vh;
+					overflow-x: hidden;
                 }
                 
                 body.no-scroll {
@@ -68,6 +69,12 @@
                     background-color: #ffffff;
                 }
                 
+                @media (max-width: 768px) {
+                    .section {
+                        padding: 8rem 2rem;
+                    }
+                }
+                
                 .section+.section {
                     padding-top: 0;
                 }
@@ -76,14 +83,30 @@
                     padding: 12rem 0 0 2.4rem;
                 }
                 
+                .section.-over.-right {
+                    padding: 12rem 2.4rem 0 0;
+                }
+                
                 @media (max-width: 768px) {
                     .section.-over {
                         padding: 12rem 0 0 2rem;
                     }
                 }
                 
+                @media (max-width: 768px) {
+                    .section.-over.-right {
+                        padding: 12rem 2rem 0 0;
+                    }
+                }
+                
                 .section.-footer {
                     padding: 12rem 2.4rem 0;
+                }
+                
+                @media (max-width: 768px) {
+                    .section.-footer {
+                        padding: 8rem 2rem 0;
+                    }
                 }
                 /* ============================================
    3. ヘッダー
@@ -203,8 +226,8 @@
    ============================================ */
                 
                 .hero-section {
-                    padding: 0 0 2rem;
-                    background-color: #f9fafb;
+                    padding: 0 0 2.4rem;
+                    background-color: #fff;
                 }
                 
                 .slider-wrapper {
@@ -266,6 +289,11 @@
                 @media (max-width: 768px) {
                     .section-title.-footer {
                         margin-bottom: 4rem;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .section-title.-footer .title-ja {
+                        margin-top: 0;
                     }
                 }
                 
@@ -275,6 +303,18 @@
                     background-color: #dc2626;
                     border-radius: 50%;
                     flex-shrink: 0;
+                }
+                
+                @media (max-width: 768px) {
+                    .title-dot-wrapper {
+                        display: flex;
+                    }
+                }
+                
+                .title-dot-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.2rem;
                 }
                 
                 .title-dot.-sns {
@@ -305,6 +345,14 @@
                     letter-spacing: 2px;
                 }
                 
+                @media (max-width: 768px) {
+                    .title-en.-sub {
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        line-height: 2.8rem;
+                    }
+                }
+                
                 .title-ja {
                     font-size: 1.4rem;
                     line-height: 1.9rem;
@@ -319,6 +367,12 @@
                 .youtube-section {
                     padding: 6.4rem 2.4rem 0;
                 }
+
+				@media (max-width: 768px) {
+					.youtube-section {
+						padding: 4rem 2rem 0;
+					}
+				}
                 
                 .youtube-header {
                     display: flex;
@@ -350,6 +404,24 @@
                     height: 288px;
                     object-fit: cover;
                 }
+
+                @media (max-width: 768px) {
+					.youtube-content__video {
+						aspect-ratio: 16 / 9;
+						width: 100%;
+						max-width: 480px;
+						margin: 0 auto;
+					}
+                    .youtube-content__video-inner {
+						aspect-ratio: 16 / 9;
+                        width: 100%;
+                    }
+                    .youtube-content__video iframe {
+						aspect-ratio: 16 / 9;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
                 /* ============================================
    7. Instagramセクション
    ============================================ */
@@ -364,6 +436,12 @@
                 .instagram-section {
                     padding: 6.4rem 2.4rem 12rem!important;
                 }
+
+				@media (max-width: 768px) {
+					.instagram-section {
+						padding: 6.4rem 2rem 8rem!important;
+					}
+				}
                 
                 .instagram-content {
                     display: flex;
@@ -385,15 +463,40 @@
                     justify-content: center;
                 }
                 
+                @media (max-width: 768px) {
+                    .instagram-content__img {
+                        justify-content: center;
+                        gap: 1.6rem;
+                        flex-wrap: wrap;
+                    }
+                }
+                
                 .instagram-content__img img {
                     max-width: 238px;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
+
+				@media (max-width: 768px) {
+                    .instagram-content__img img {
+                        display: block;
+                        height: auto;
+                        width: 100%;
+                        flex: 0 0 calc((100% - 1.6rem) / 2);
+                        max-width: calc((100% - 1.6rem) / 2);
+                        box-sizing: border-box;
+                    }
+				}
                 
                 .instagram-content__img img:hover {
                     opacity: 0.7;
+                }
+                
+                @media (max-width: 768px) {
+                    .instagram-content__img img:nth-child(3) {
+                        display: none;
+                    }
                 }
                 /* ============================================
    6. ニュースセクション
@@ -405,8 +508,22 @@
                     justify-content: space-between;
                 }
                 
+                @media (max-width: 768px) {
+                    .news-content {
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                    }
+                }
+                
                 .news-title {
                     margin-bottom: 4.2rem;
+                }
+                
+                @media (max-width: 768px) {
+                    .news-title {
+                        margin-bottom: 3.2rem;
+                    }
                 }
                 
                 .news-content__inner {
@@ -420,6 +537,14 @@
                     gap: 1.2rem;
                     margin-bottom: 3.4rem;
                     margin-left: 6rem;
+                }
+                
+                @media (max-width: 768px) {
+                    .news-filters {
+                        margin-left: 0;
+                        gap: 1.6rem 1.2rem;
+                        justify-content: center;
+                    }
                 }
                 
                 .news-filter-btn {
@@ -452,6 +577,12 @@
                     margin-left: 6rem;
                 }
                 
+                @media (max-width: 768px) {
+                    .news-list {
+                        margin-left: 0;
+                    }
+                }
+                
                 .news-item {
                     display: flex;
                     align-items: center;
@@ -460,6 +591,12 @@
                     border-bottom: 1px solid #e5e7eb;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
+                }
+                
+                @media (max-width: 768px) {
+                    .news-item {
+                        padding: 1.6rem 0;
+                    }
                 }
                 
                 .news-item:hover {
@@ -497,11 +634,18 @@
                     font-weight: 400;
                 }
                 
+                .news-item-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.4rem;
+                    width: 100%;
+                }
+                
                 .view-more-btn {
                     display: inline-block;
                     border: 1px solid #dc2626;
                     color: #dc2626;
-                    padding: 1.1rem 4rem;
+                    padding: 1.1rem 2rem;
                     border-radius: 9999px;
                     font-size: 1.2rem;
                     line-height: 1.6rem;
@@ -509,10 +653,27 @@
                     transition: all 0.3s ease;
                     max-width: 160px;
                     width: 100%;
+                    height: max-content;
+                }
+
+				@media (max-width: 768px) {
+					.view-more-btn.-spSmall {
+						max-width: 120px;
+					}
+				}
+                
+                .view-more-btn.-large {
+                    max-width: 200px;
                 }
                 
                 .view-more-btn.-under {
                     margin-top: 4.8rem;
+                }
+                
+                @media (max-width: 768px) {
+                    .view-more-btn.-under {
+                        margin-top: 4rem;
+                    }
                 }
                 
                 .view-more-btn:hover {
@@ -534,16 +695,35 @@
                     margin-bottom: 4.8rem;
                 }
                 
+                @media (max-width: 768px) {
+                    .fair-header {
+                        margin-bottom: 4rem;
+                    }
+                }
+                
                 .fair-grid {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 6.4rem;
                 }
                 
+                @media (max-width: 768px) {
+                    .fair-grid {
+                        gap: 2.4rem;
+                    }
+                }
+                
                 .fair-card {
                     overflow: hidden;
                     cursor: pointer;
                     transition: transform 0.3s ease;
+                }
+                
+                @media (max-width: 768px) {
+                    .fair-card {
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
                 
                 .fair-card:hover {
@@ -581,7 +761,16 @@
                 
                 @media (max-width: 1240px) {
                     .shop-grid {
-                        padding: 4.4rem 2.4rem 4.4rem;
+                        padding: 4.4rem 2rem 4.4rem;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .shop-grid {
+                        padding: 3.6rem 2.4rem 4rem 2.4rem;
+                        gap: 4rem;
+						flex-direction: column;
+                        align-items: center;
                     }
                 }
                 
@@ -633,8 +822,52 @@
                     }
                 }
                 
+                .prefecture-tabs {
+                    display: none;
+                }
+                
+                @media (max-width: 768px) {
+                    .prefecture-tabs {
+                        display: flex;
+                        margin-bottom: 2.4rem;
+                        border-bottom: 1px solid #555;
+                    }
+                    .prefecture-tab {
+                        max-width: 138px;
+                        width: 100%;
+                        background: none;
+                        border: none;
+                        color: #555;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        cursor: pointer;
+                        border-top: 1px solid #555555;
+                        border-left: 1px solid #555555;
+                        border-right: 1px solid #555555;
+                        transition: all 0.3s ease;
+                        border-radius: 8px 8px 0 0;
+                        padding: 0.3rem 1.6rem;
+                    }
+                    .prefecture-tab+.prefecture-tab {
+                        margin-left: 0.3rem;
+                    }
+                    .prefecture-tab.active {
+                        color: #fff;
+                        background-color: #555555;
+                    }
+                    .prefecture-tab:hover {
+                        opacity: 0.7;
+                    }
+                }
+                
                 .prefecture-section {
                     margin-bottom: 3.2rem;
+                }
+                
+                @media (max-width: 768px) {
+                    .prefecture-section {
+                        margin-bottom: 2.4rem;
+                    }
                 }
                 
                 .prefecture-title {
@@ -645,11 +878,40 @@
                     margin-bottom: 1.6rem;
                 }
                 
+                @media (max-width: 768px) {
+                    .prefecture-title {
+                        display: none;
+                    }
+                    .prefecture-section[data-tab-content="chugoku"] {
+                        display: none;
+                    }
+                }
+                /* PC画面では両方のセクションを表示 */
+                
+                @media (min-width: 769px) {
+                    .prefecture-section[data-tab-content="kinki"],
+                    .prefecture-section[data-tab-content="chugoku"] {
+                        display: block !important;
+                    }
+                }
+                
                 .prefecture-buttons {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 0.8rem;
                 }
+                
+                @media (max-width: 768px) {
+                    .prefecture-buttons {
+                        gap: 2.4rem 1.6rem;
+                    }
+                }
+
+				@media (max-width: 390px) {
+					.prefecture-buttons {
+						gap: 1.2rem 0.8rem;
+					}
+				}
                 
                 .prefecture-btn {
                     background-color: white;
@@ -664,6 +926,14 @@
                     font-weight: 500;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                }
+                
+                @media (max-width: 768px) {
+                    .prefecture-btn {
+                        max-width: 96px;
+                        width: 100%;
+                        height: 48px;
+                    }
                 }
                 
                 .prefecture-btn:hover {
@@ -723,6 +993,14 @@
                     margin-bottom: 1.2rem;
                 }
                 
+                .store-name a {
+                    text-decoration: underline;
+                }
+                
+                .store-name a:hover {
+                    text-decoration: none;
+                }
+                
                 .store-info {
                     font-size: 1.6rem;
                     line-height: 2.2rem;
@@ -736,6 +1014,12 @@
                 .point-card-section {
                     padding: 0 2.4rem;
                 }
+
+				@media (max-width: 768px) {
+					.point-card-section {
+						padding: 8rem 2rem  0 0!important;
+					}
+				}
                 
                 .point-card-header {
                     display: flex;
@@ -746,15 +1030,26 @@
                 
                 @media (max-width: 768px) {
                     .point-card-header {
+                        padding: 0 2rem;
                         margin-bottom: 4rem;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .point-card-header .section-title {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .point-card-header .section-title .title-ja {
+                        margin-top: 0;
                     }
                 }
                 
                 .point-card-grid {
                     display: flex;
-                    gap: 1.4rem 1.6rem;
+                    gap: 4rem 2.4rem;
                     flex-wrap: wrap;
-                    padding: 4.4rem 0 4.4rem 0;
+                    padding: 4rem 0 4rem 0;
                     position: relative;
                     z-index: 2;
                 }
@@ -762,8 +1057,19 @@
                 @media (max-width: 1240px) {
                     .point-card-grid {
                         padding: 4.4rem 2.4rem 4.4rem;
+						gap: 2.4rem;
                     }
                 }
+
+				@media (max-width: 1024px) {
+					.point-card-grid {
+						flex-direction: column;
+					}
+				}
+
+				.point-card-grid {
+					padding: 2rem 2rem 3.2rem;
+				}
                 
                 .point-card-grid-wrapper {
                     position: relative;
@@ -775,18 +1081,18 @@
                     background: #F1EDE7;
                     height: 100%;
                     width: 92.5%;
-                    margin-left: 7.5%;
+                    margin-right: 7.5%;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    border-radius: 40px 0 0 40px;
+                    border-radius: 0 40px 40px 0;
                     z-index: 1;
                 }
                 
                 @media (max-width: 1320px) {
                     .point-card-grid-wrapper::before {
                         width: 100%;
-                        margin-left: 0;
+                        margin-right: 0;
                     }
                 }
                 
@@ -803,10 +1109,196 @@
                         border-radius: 0;
                     }
                 }
+                
+                .point-card-new-member {
+                    max-width: 1024px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    padding: 0 3.2rem;
+                    align-items: center;
+                }
+
+				@media (max-width: 1024px) {
+					.point-card-new-member {
+						padding: 2.4rem 2rem 2.8rem;
+						flex-direction: column;
+					}
+				}
+
+				@media (max-width: 768px) {
+					.point-card-new-member {
+						padding: 2.4rem 1.4rem 2.8rem;
+						flex-direction: column;
+					}
+				}
+                
+                .point-card-new-member-text {
+                    display: flex;
+                    gap: 2.4rem;
+                    align-items: center;
+                }
+
+				@media (max-width: 1024px) {
+					.point-card-new-member-text {
+						flex-direction: column;
+						gap: 0;
+					}
+				}
+                
+                .point-card-new-member p {
+                    font-size: 3.2rem;
+                    line-height: 4.4rem;
+                    font-weight: 600;
+                    color: #555555;
+                }
+
+				@media (max-width: 1080px) {
+					.point-card-new-member p {
+						font-size: 2.8rem;
+						line-height: 3.2rem;
+					}
+				}
+
+				@media (max-width: 768px) {
+					.point-card-new-member p {
+						font-size: 2.4rem;
+						line-height: 3.2rem;
+					}
+				}
+                
+                .point-card-new-member img {
+                    max-width: 408px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+				@media screen and (max-width: 768px) {
+					.point-card-new-member img {
+						max-width: 302px;
+					}
+				}
+                
+                .point-card-new-member-pointCard {
+                    text-align: center;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    padding: 3.2rem;
+                    align-items: center;
+                    max-width: 437px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2.4rem;
+                }
+
+				@media (max-width: 1024px) {
+					.point-card-new-member-pointCard {
+						max-width: initial;
+						padding: 2.4rem;
+					}
+				}
+                
+                .point-card-new-member-pointCard-content {
+                    gap: 2.4rem;
+                }
+                
+                .point-card-new-member-pointCard-content img {
+                    margin-top: 2rem;
+                }
+                
+                .point-card-new-member-pointCard p {
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+                
+                .point-card-new-member-pointCard span {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    margin-top: 1.2rem;
+                    display: block;
+                }
+                
+                .point-card-new-member-craditCard {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #fff;
+                    border-radius: 3.2rem;
+                    flex: 1;
+                    padding: 3.2rem 2.4rem;
+                }
+
+				@media (max-width: 1024px) {
+					.point-card-new-member-craditCard {
+						padding: 2rem 0 3.2rem;
+					}
+				}
+                
+                .point-card-new-member-craditCard-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.4rem;
+                    justify-content: center;
+                    padding: 0 0 2.4rem 0;
+                }
+
+				@media (max-width: 768px) {
+					.point-card-new-member-craditCard-item {
+						flex-direction: column;
+						gap: 1.6rem;
+					}
+				}
+                
+                .point-card-new-member-craditCard-item:last-of-type {
+                    border-top: 1px solid #F1EDE7;
+                    padding: 2.4rem 0 0 0;
+                }
+                
+                .point-card-new-member-craditCard-item p {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    font-weight: 500;
+                    color: #555555;
+                }
+                
+                .point-card-new-member-craditCard-item-text {
+                    max-width: 288px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                }
+                
+                .point-card-new-member-craditCard-item-text button {
+                    margin-left: auto;
+                }
+                
+                .point-card-new-member-craditCard-item span {
+                    font-size: 2.4rem;
+                    line-height: 3.2rem;
+                    font-weight: 500;
+                    color: #555555;
+                    display: block;
+                }
+
+				.point-card-btn {
+					margin: 0.8rem auto 0;
+				}
                 /* ============================================
    10. リンクセクション
    ============================================ */
                 
+				@media (max-width: 768px) {
+				.links-section{
+					padding: 8rem 0 0 2rem!important;
+				}
+				}
+
                 .links-card-section {
                     padding: 0 2.4rem;
                 }
@@ -839,6 +1331,35 @@
                     }
                 }
                 
+                @media (max-width: 824px) {
+                    .links-grid {
+                        align-items: center;
+                        margin: 0 auto;
+                        max-width: 602px;
+						padding: 4.4rem 2rem 4.4rem;
+                    }
+                }
+
+				@media (max-width: 624px) {
+                    .links-grid {
+                        align-items: center;
+                        margin: 0 auto;
+                        max-width: 412px;
+						padding: 2.4rem 2.4rem 4rem;
+                    }
+                }
+				
+				@media (max-width: 440px) {
+					.links-grid {
+						justify-content: center;
+                    }
+
+					.links-grid img{
+						max-width: 330px;
+						width: 100%;
+                    }
+                }
+                
                 .links-grid-wrapper {
                     position: relative;
                 }
@@ -849,11 +1370,11 @@
                     background: #F1EDE7;
                     height: 100%;
                     width: 92.5%;
-                    margin-right: 7.5%;
+                    margin-left: 7.5%;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    border-radius: 0 40px 40px 0;
+                    border-radius: 40px 0 0 40px;
                     z-index: 1;
                 }
                 
@@ -1205,6 +1726,31 @@
                     opacity: 1;
                     background: #dc2626;
                 }
+                
+                /* Scroll down button - mobile only */
+                #scroll-down {
+                    display: none;
+                }
+                
+                @media (max-width: 768px) {
+                    #scroll-down {
+                        display: block;
+						max-width: max-content;
+						margin: 0 auto;
+                        cursor: pointer;
+                        transition: opacity 0.3s ease;
+                        animation: scrollDownPulse 2s ease-in-out infinite;
+                    }
+                }
+                
+                @keyframes scrollDownPulse {
+                    0%, 100% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                }
                 /* ============================================
    15. レスポンシブデザイン
    ============================================ */
@@ -1242,7 +1788,11 @@
                     .news-item {
                         flex-direction: column;
                         align-items: flex-start;
-                        gap: 0.5rem;
+                        gap: 1.6rem;
+                    }
+                    .news-item:nth-child(4),
+                    .news-item:nth-child(5) {
+                        display: none;
                     }
                     /* FAIR */
                     .fair-grid {
@@ -1383,5 +1933,45 @@
                 @media (max-width: 768px) {
                     .upper-swiper .swiper-slide.swiper-slide-active img {
                         border-radius: 0;
+                    }
+                }
+                
+                /* Mobile: make upper-swiper full-bleed and full-viewport height */
+                @media (max-width: 768px) {
+                    .upper-swiper {
+                        width: 100vw;
+                        position: relative;
+                        left: 50%;
+                        right: 50%;
+                        margin-left: -50vw;
+                        margin-right: -50vw;
+                    }
+                    .upper-swiper .swiper-wrapper {
+                        align-items: stretch;
+                    }
+                    .upper-swiper .swiper-slide img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+                /* Mobile: make lower-swiper full-bleed */
+                @media (max-width: 768px) {
+                    .lower-swiper {
+                        width: calc(100% - 40px);
+                        position: static;
+                        left: auto;
+                        right: auto;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                    .lower-swiper .swiper-wrapper {
+                        align-items: stretch;
+                    }
+                    .lower-swiper .swiper-slide img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
