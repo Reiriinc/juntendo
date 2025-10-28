@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗情報一覧 | ジュンテンドー - JUNTENDO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/shoplist.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+					<a href="/">
+                    	<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+                	</a>
+				</div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="#products">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile" id="mobile-menu">
+            <div class="container">
+                <nav>
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="#products">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="page-title" class="hero-section">
+			<div class="hero-banner-wrapper">
+				<div class="hero-banner">
+					<div class="hero-banner-content">
+						<h1 class="hero-title-en">SHOP INFO.</h1>
+						<h2 class="hero-title-ja">店舗情報</h2>
+					</div>
+				</div>
+			</div>
+			<div class="breadcrumb-wrapper">
+				<div class="breadcrumb">
+					<a href="index.html">HOME</a>
+					<span>—</span>
+					<span>店舗情報</span>
+				</div>
+			</div>
+        </section>
+
+		        <!-- SHOP INFO Section -->
+				<section id="p-shop-info" class="section -over p-shop-info-section">
+					<div>
+
+						<!-- Title and Button -->
+						<div class="section-title-wrapper">
+							<div class="p-shop-info-header container">
+								<div class="section-title">
+									<div class="section-title-inner">
+										<div class="title-dot"></div>
+										<h2 class="title-en">SHOP INFO.</h2>
+									</div>
+									<span class="title-ja">店舗情報</span>
+								</div>
+								<button class="view-more-btn pc-block">VIEW MORE</button>
+							</div>
+							<p class="c-description">ご覧になりたい地域をお選びください。</p>
+						</div>
+		
+						<!-- Two Column Layout -->
+						<div class="p-shop-grid-wrapper">
+							<div class="p-shop-grid container">
+								<!-- Left Panel: Map and Filters -->
+								<div class="p-shop-panel -top">
+									<!-- Map Image -->
+									<div class="map-container">
+										<img id="js-prefecture-map" class="map-image" width="432" height="389" src="img/index/img-shopinfo01.webp" alt="">
+									</div>
+
+									<div class="p-prefecture-tabs__wrapper">
+										<div class="p-prefecture-tabs">
+											<button class="p-prefecture-tab js-prefecture-tab active" data-tab="kinki">近畿地方</button>
+											<button class="p-prefecture-tab js-prefecture-tab" data-tab="chugoku">中国地方</button>
+										</div>
+									
+										<div class="p-prefecture-section" data-tab-content="kinki">
+											<h3 class="p-prefecture-title">近畿地方</h3>
+											<div class="p-prefecture-buttons">
+												<button class="p-prefecture-btn js-prefecture-btn active" data-prefecture="京都府" data-image-index="01">
+													京都府
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">西舞鶴モール店</h4>
+															<p class="store-postal">〒624-0831</p>
+															<p class="store-address">京都府舞鶴市女布2番172</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">0773-78-2050</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">マイン峰山店</h4>
+															<p class="store-postal">〒627-0005</p>
+															<p class="store-address">京都府京丹後市峰山町新町1701番地</p>
+															<p class="store-time">7:30〜20:00</p>
+															<p class="store-tel">0772-69-2287</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">網野店</h4>
+															<p class="store-postal">〒629-3113</p>
+															<p class="store-address">京都府京丹後市網野町小浜小字勝山78番地2</p>
+															<p class="store-time">9:00〜19:30</p>
+															<p class="store-tel">0772-79-2027</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">福知山店</h4>
+															<p class="store-postal">〒620-0926</p>
+															<p class="store-address">京都府福知山市新庄11番1</p>
+															<p class="store-time">8:00～19:30</p>
+															<p class="store-tel">0773-25-2140</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">綾部店</h4>
+															<p class="store-postal">〒623-0011</p>
+															<p class="store-address">京都府綾部市青野町西中屋30番地</p>
+															<p class="store-time">9:00～19:30</p>
+															<p class="store-tel">0773-40-2035</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">京丹波店</h4>
+															<p class="store-postal">〒622-0214</p>
+															<p class="store-address">京都府船井郡京丹波町蒲生蒲生野267番地1</p>
+															<p class="store-time">8:00～19:30</p>
+															<p class="store-tel">0771-89-3005</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="大阪府" data-image-index="02">
+													大阪府
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">大阪本店</h4>
+															<p class="store-postal">〒530-0001</p>
+															<p class="store-address">大阪府大阪市北区梅田1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">06-1234-5678</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">堺店</h4>
+															<p class="store-postal">〒590-0001</p>
+															<p class="store-address">大阪府堺市堺区大町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">072-123-4567</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="兵庫県" data-image-index="03">
+													兵庫県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">神戸店</h4>
+															<p class="store-postal">〒650-0001</p>
+															<p class="store-address">兵庫県神戸市中央区三宮町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">078-123-4567</p>
+														</div>
+														<div class="store-item">
+															<h4 class="store-name">姫路店</h4>
+															<p class="store-postal">〒670-0001</p>
+															<p class="store-address">兵庫県姫路市本町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">079-123-4567</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="奈良県" data-image-index="04">
+													奈良県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">奈良店</h4>
+															<p class="store-postal">〒630-0001</p>
+															<p class="store-address">奈良県奈良市登大路町1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">0742-12-3456</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="和歌山県" data-image-index="05">
+													和歌山県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">和歌山店</h4>
+															<p class="store-postal">〒640-0001</p>
+															<p class="store-address">和歌山県和歌山市中央1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">073-123-4567</p>
+														</div>
+													</div>
+												</button>
+											</div>
+										</div>
+									
+										<div class="p-prefecture-section" data-tab-content="chugoku">
+											<h3 class="p-prefecture-title">中国地方</h3>
+											<div class="p-prefecture-buttons">
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="鳥取県" data-image-index="06">
+													鳥取県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">鳥取店</h4>
+															<p class="store-postal">〒680-0001</p>
+															<p class="store-address">鳥取県鳥取市西町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">0857-12-3456</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="島根県" data-image-index="07">
+													島根県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">松江店</h4>
+															<p class="store-postal">〒690-0001</p>
+															<p class="store-address">島根県松江市朝日町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">0852-12-3456</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="岡山県" data-image-index="08">
+													岡山県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">岡山店</h4>
+															<p class="store-postal">〒700-0001</p>
+															<p class="store-address">岡山県岡山市北区表町1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">086-123-4567</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="広島県" data-image-index="09">
+													広島県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">広島店</h4>
+															<p class="store-postal">〒730-0001</p>
+															<p class="store-address">広島県広島市中区本通1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">082-123-4567</p>
+														</div>
+													</div>
+												</button>
+												<button class="p-prefecture-btn js-prefecture-btn" data-prefecture="山口県" data-image-index="10">
+													山口県
+													<div class="store-data" style="display: none;">
+														<div class="store-item">
+															<h4 class="store-name">山口店</h4>
+															<p class="store-postal">〒753-0001</p>
+															<p class="store-address">山口県山口市中央1-1-1</p>
+															<p class="store-time">8:00〜20:00</p>
+															<p class="store-tel">083-123-4567</p>
+														</div>
+													</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- STORE LIST Section -->
+				<section id="p-store-list" class="section p-store-list-section">
+					<div class="p-shop-panel-list">
+						<h3 id="js-store-list-title" class="store-list-title">京都府（6店舗）</h3>
+
+						<!-- Store List -->
+						<div id="store-list" class="store-list">
+								<!-- 京都府の店舗 -->
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">西舞鶴モール店</h4>
+										<div class="store-info-wrapper">
+											<p class="store-info">〒624-0831　<br class="sp-block"/>京都府舞鶴市女布2番172</p>
+											<div class="store-info-wrapper-under">
+											<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+											<span class="store-info-divider">/</span>
+											<p class="store-info"><span>TEL</span><a href="tel:0773-78-2050">0773-78-2050</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="https://www.j-eshop.jp/shops/kyoto.html#264" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">マイン峰山店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒627-0005　京都府京丹後市峰山町新町1701番地</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">7:30〜20:00</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:0772-69-2287">0772-69-2287</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="https://www.j-eshop.jp/shops/kyoto.html#196" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">網野店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒629-3113　京都府京丹後市網野町小浜小字勝山78番地2</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">9:00〜19:30</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:0772-79-2027">0772-79-2027</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="https://www.j-eshop.jp/shops/kyoto.html#116" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">福知山店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒620-0926　京都府福知山市新庄11番1</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">8:00～19:30</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:0773-25-2140">0773-25-2140</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="https://www.j-eshop.jp/shops/kyoto.html#254" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">綾部店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒623-0011　京都府綾部市青野町西中屋30番地</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">9:00～19:30</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:0773-40-2035">0773-40-2035</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="https://www.j-eshop.jp/shops/kyoto.html#175" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+								<div class="store-item" data-prefecture="京都府">
+									<div class="store-item-content">
+										<h4 class="store-name">京丹波店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒622-0214　京都府船井郡京丹波町蒲生蒲生野267番地1</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">8:00～19:30</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:0771-89-3005">0771-89-3005</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 大阪府の店舗 -->
+								<div class="store-item" data-prefecture="大阪府" style="display: none;">
+									<div class="store-item-content">
+										<h4 class="store-name">大阪本店</h4>
+										<div class="store-info-wrapper">
+										<p class="store-info">〒530-0001　大阪府大阪市北区梅田1-1-1</p>
+										<div class="store-info-wrapper-under">
+										<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+										<span class="store-info-divider">/</span>
+										<p class="store-info"><span>TEL</span><a href="tel:06-1234-5678">06-1234-5678</a></p>
+										</div>
+										</div>
+									</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+												<div class="store-item" data-prefecture="大阪府" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">堺店</h4>
+														<p class="store-info">〒590-0001　大阪府堺市堺区大町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:072-123-4567">072-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 兵庫県の店舗 -->
+												<div class="store-item" data-prefecture="兵庫県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">神戸店</h4>
+														<p class="store-info">〒650-0001　兵庫県神戸市中央区三宮町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:078-123-4567">078-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+												<div class="store-item" data-prefecture="兵庫県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">姫路店</h4>
+														<p class="store-info">〒670-0001　兵庫県姫路市本町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:079-123-4567">079-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 奈良県の店舗 -->
+												<div class="store-item" data-prefecture="奈良県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">奈良店</h4>
+														<p class="store-info">〒630-0001　奈良県奈良市登大路町1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:0742-12-3456">0742-12-3456</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 和歌山県の店舗 -->
+												<div class="store-item" data-prefecture="和歌山県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">和歌山店</h4>
+														<p class="store-info">〒640-0001　和歌山県和歌山市中央1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:073-123-4567">073-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 鳥取県の店舗 -->
+												<div class="store-item" data-prefecture="鳥取県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">鳥取店</h4>
+														<p class="store-info">〒680-0001　鳥取県鳥取市西町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:0857-12-3456">0857-12-3456</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 島根県の店舗 -->
+												<div class="store-item" data-prefecture="島根県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">松江店</h4>
+														<p class="store-info">〒690-0001　島根県松江市朝日町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:0852-12-3456">0852-12-3456</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 岡山県の店舗 -->
+												<div class="store-item" data-prefecture="岡山県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">岡山店</h4>
+														<p class="store-info">〒700-0001　岡山県岡山市北区表町1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:086-123-4567">086-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 広島県の店舗 -->
+												<div class="store-item" data-prefecture="広島県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">広島店</h4>
+														<p class="store-info">〒730-0001　広島県広島市中区本通1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:082-123-4567">082-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+
+								<!-- 山口県の店舗 -->
+												<div class="store-item" data-prefecture="山口県" style="display: none;">
+													<div class="store-item-content">
+														<h4 class="store-name">山口店</h4>
+														<p class="store-info">〒753-0001　山口県山口市中央1-1-1</p>
+														<div class="store-info-wrapper-under">
+														<p class="store-info"><span>営業時間</span><span class="time">8:00〜20:00</span></p>
+														<span class="store-info-divider">/</span>
+														<p class="store-info"><span>TEL</span><a href="tel:083-123-4567">083-123-4567</a></p>
+													</div>
+													</div>
+									<div class="store-btn-wrapper">
+										<a href="#" target="_blank" class="view-more-btn -small">店舗詳細</a>
+										<a href="#" target="_blank" class="view-more-btn -small">チラシを見る</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+    </main>
+
+	<div class="footer-wrapper">
+		<section id="about" class="section -footer">
+			<div class="container">
+				<!-- Title -->
+				<div class="section-title -footer">
+					<div class="title-dot-wrapper">
+						<div class="title-dot"></div>
+						<h2 class="title-en">COMPANY</h2>
+					</div>
+					<span class="title-ja">会社概要</span>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<!-- Top Section -->
+			<div class="footer-top">
+				<!-- Left: Image -->
+				<div class="footer-image">
+					<img src="img/common/img-footer.webp" alt="">
+				</div>
+
+				<!-- Right: Company Info -->
+				<div class="footer-info">
+					<!-- Logo -->
+					<div class="footer-logo-box">
+						<div class="logo">
+							<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+						</div>
+					</div>
+
+					<!-- Address -->
+					<div class="footer-address">
+						<p class="company-name">株式会社ジュンテンドー</p>
+						<p>〒699-3676</p>
+						<p>島根県益田市遠田町2179番地1</p>
+						<p class="contact"><span>TEL</span>（0856）24-2400（代表）</p>
+						<p>FAX：（0856）24-2425</p>
+					</div>
+
+					<!-- CTA Button -->
+					<a href="#corporate" class="footer-cta-btn">CORPORATE SITE</a>
+				</div>
+			</div>
+
+			<!-- Bottom Red Bar -->
+			<div class="footer-bottom">
+				<div class="container footer-container">
+					<div class="footer-bottom-content">
+						<!-- Social Media Links -->
+						<div class="social-links">
+							<!-- Facebook -->
+							<a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
+								</div>
+							</a>
+
+							<!-- Instagram -->
+							<a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
+								</div>
+							</a>
+
+							<!-- LINE -->
+							<a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon social-icon-green">
+									<img src="img/common/img-icon-line.svg" width="20" height="20" alt="LINE">
+
+								</div>
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer-nav">
+							<a href="#home">ホーム</a>
+							<a href="#news">お知らせ</a>
+							<a href="#products">商品情報</a>
+							<a href=/shoplist.html">店舗情報</a>
+							<a href="#corporate">法人のみなさまへ</a>
+							<a href="#about">会社概要</a>
+						</nav>
+
+						<!-- Scroll to Top Button -->
+						<button id="scroll-to-top" class="scroll-top-btn">
+							<svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+							</svg>
+						</button>
+					</div>
+
+					<!-- Copyright -->
+					<div class="footer-copyright">
+						Copyright©2025 JUNTENDO CO.,LTD.
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Youtube API -->
+    <script src="js/youtubeapi.js"></script>
+</body>
+
+</html>

@@ -1,10 +1,11 @@
 /* ============================================
 HERO SECTION
 ============================================ */
-                
+
 .hero-section {
 	padding: 0 0 2.4rem;
 	background-color: #fff;
+	overflow-x: hidden;
 }
 
 .slider-wrapper {
@@ -15,6 +16,7 @@ HERO SECTION
 	border-radius: 2.4rem;
 	overflow: visible;
 }
+
 /* 小さいスライド */
 
 .small-slide {
@@ -46,7 +48,7 @@ HERO SECTION
 /* ============================================
 Youtube SECTION
 ============================================ */
-                
+
 .youtube-section {
 	padding: 6.4rem 2.4rem 0;
 }
@@ -95,16 +97,19 @@ Youtube SECTION
 		max-width: 480px;
 		margin: 0 auto;
 	}
+
 	.youtube-content__video-inner {
 		aspect-ratio: 16 / 9;
 		width: 100%;
 	}
+
 	.youtube-content__video iframe {
 		aspect-ratio: 16 / 9;
 		width: 100%;
 		height: auto;
 	}
 }
+
 /* ============================================
 Instagram SECTION
 ============================================ */
@@ -117,12 +122,12 @@ Instagram SECTION
 }
 
 .instagram-section {
-	padding: 6.4rem 2.4rem 12rem!important;
+	padding: 6.4rem 2.4rem 12rem !important;
 }
 
 @media (max-width: 768px) {
 	.instagram-section {
-		padding: 6.4rem 2rem 8rem!important;
+		padding: 6.4rem 2rem 8rem !important;
 	}
 }
 
@@ -181,6 +186,7 @@ Instagram SECTION
 		display: none;
 	}
 }
+
 /* ============================================
 NEWS SECTIOM
 ============================================ */
@@ -330,6 +336,7 @@ NEWS SECTIOM
 		align-items: flex-start;
 		gap: 1.6rem;
 	}
+
 	.news-item:nth-child(4),
 	.news-item:nth-child(5) {
 		display: none;
@@ -379,6 +386,7 @@ NEWS SECTIOM
 .text-right {
 	text-align: right;
 }
+
 /* ============================================
 FAIR SECTION
 ============================================ */
@@ -425,6 +433,7 @@ FAIR SECTION
 .fair-card:hover {
 	opacity: 0.7;
 }
+
 /* ============================================
 SHOP INFO SECTION
 ============================================ */
@@ -518,14 +527,15 @@ SHOP INFO SECTION
 	}
 }
 
-                @media (max-width: 1024px) {
-                    .shop-grid {
-                        grid-template-columns: 1fr;
-                    }
-                    .point-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
+@media (max-width: 1024px) {
+	.shop-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.point-grid {
+		grid-template-columns: 1fr;
+	}
+}
 
 .prefecture-tabs {
 	display: none;
@@ -537,6 +547,7 @@ SHOP INFO SECTION
 		margin-bottom: 2.4rem;
 		border-bottom: 1px solid #555;
 	}
+
 	.prefecture-tab {
 		max-width: 138px;
 		width: 100%;
@@ -553,13 +564,16 @@ SHOP INFO SECTION
 		border-radius: 8px 8px 0 0;
 		padding: 0.3rem 1.6rem;
 	}
+
 	.prefecture-tab+.prefecture-tab {
 		margin-left: 0.3rem;
 	}
+
 	.prefecture-tab.active {
 		color: #fff;
 		background-color: #555555;
 	}
+
 	.prefecture-tab:hover {
 		opacity: 0.7;
 	}
@@ -587,13 +601,16 @@ SHOP INFO SECTION
 	.prefecture-title {
 		display: none;
 	}
+
 	.prefecture-section[data-tab-content="chugoku"] {
 		display: none;
 	}
 }
+
 /* PC画面では両方のセクションを表示 */
 
 @media (min-width: 769px) {
+
 	.prefecture-section[data-tab-content="kinki"],
 	.prefecture-section[data-tab-content="chugoku"] {
 		display: block !important;
@@ -683,26 +700,27 @@ SHOP INFO SECTION
 }
 
 
-                /* スクロールバー */
-                .store-list::-webkit-scrollbar {
-                    width: 8px;
-                }
-                
-                .store-list::-webkit-scrollbar-track {
-                    background: #f1f1f1;
-                    border-radius: 10px;
-                }
-                
-                .store-list::-webkit-scrollbar-thumb {
-                    background: #888;
-                    border-radius: 10px;
-                }
-                
-                .store-list::-webkit-scrollbar-thumb:hover {
-                    background: #555;
-                }
-                /* swiper */
-                /* Upper swiper full-bleed and responsive height to avoid gaps on wide screens */
+/* スクロールバー */
+.store-list::-webkit-scrollbar {
+	width: 8px;
+}
+
+.store-list::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+.store-list::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+
+.store-list::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* swiper */
+/* Upper swiper full-bleed and responsive height to avoid gaps on wide screens */
 
 .store-item {
 	padding: 0 0 2.4rem;
@@ -734,6 +752,7 @@ SHOP INFO SECTION
 	color: #555555;
 	margin-bottom: 0.8rem;
 }
+
 /* ============================================
 POINT CARD SECTION
 ============================================ */
@@ -744,7 +763,7 @@ POINT CARD SECTION
 
 @media (max-width: 768px) {
 	.point-card-section {
-		padding: 8rem 2rem  0 0!important;
+		padding: 8rem 2rem 0 0 !important;
 	}
 }
 
@@ -767,8 +786,10 @@ POINT CARD SECTION
 		flex-direction: column;
 		align-items: flex-start;
 	}
+
 	.point-card-header .section-title .title-ja {
 		margin-top: 0;
+		margin-left: 3.6rem;
 	}
 }
 
@@ -1016,14 +1037,15 @@ POINT CARD SECTION
 .point-card-btn {
 	margin: 0.8rem auto 0;
 }
+
 /* ============================================
 LINKS SECTION
 ============================================ */
 
 @media (max-width: 768px) {
-.links-section{
-	padding: 8rem 0 0 2rem!important;
-}
+	.links-section {
+		padding: 8rem 0 0 2rem !important;
+	}
 }
 
 .links-card-section {
@@ -1081,7 +1103,7 @@ LINKS SECTION
 		justify-content: center;
 	}
 
-	.links-grid img{
+	.links-grid img {
 		max-width: 330px;
 		width: 100%;
 	}
@@ -1131,6 +1153,7 @@ LINKS SECTION
 	.links-grid {
 		grid-template-columns: 1fr;
 	}
+
 	.link-banner-full .link-banner-content {
 		flex-direction: column;
 	}
@@ -1139,7 +1162,7 @@ LINKS SECTION
 /* ============================================
 Swiper CUSTOMIZE
 ============================================ */
-                
+
 .swiper {
 	width: 100%;
 	height: 100%;
@@ -1180,9 +1203,12 @@ Swiper CUSTOMIZE
 }
 
 @keyframes scrollDownPulse {
-	0%, 100% {
+
+	0%,
+	100% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
@@ -1197,17 +1223,21 @@ Swiper CUSTOMIZE
 		margin-left: -50vw;
 		margin-right: -50vw;
 	}
+
 	.upper-swiper .swiper-wrapper {
 		align-items: stretch;
 	}
+
 	.upper-swiper .swiper-slide {
 		height: var(--upper-height);
 	}
+
 	.upper-swiper .swiper-slide img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
+
 	/* lower-swiper: 同様にフルブリード＆高さ追従 */
 	.lower-swiper {
 		width: 100vw;
@@ -1217,9 +1247,11 @@ Swiper CUSTOMIZE
 		margin-left: -50vw;
 		margin-right: -50vw;
 	}
+
 	.lower-swiper .swiper-wrapper {
 		align-items: stretch;
 	}
+
 	.lower-swiper .swiper-slide img {
 		width: 100%;
 		height: 100%;
@@ -1257,9 +1289,11 @@ Swiper CUSTOMIZE
 		margin-left: -50vw;
 		margin-right: -50vw;
 	}
+
 	.upper-swiper .swiper-wrapper {
 		align-items: stretch;
 	}
+
 	.upper-swiper .swiper-slide img {
 		width: 100%;
 		height: 100%;
@@ -1277,9 +1311,11 @@ Swiper CUSTOMIZE
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+
 	.lower-swiper .swiper-wrapper {
 		align-items: stretch;
 	}
+
 	.lower-swiper .swiper-slide img {
 		width: 100%;
 		height: 100%;

@@ -21,7 +21,9 @@
             <div class="header-content">
                 <!-- Logo -->
                 <div class="logo">
-                    <img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+					<a href="/">
+                    	<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+                	</a>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -29,7 +31,7 @@
                     <a href="#home">ホーム</a>
                     <a href="#news">お知らせ</a>
                     <a href="#products">商品情報</a>
-                    <a href="#stores">店舗情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
                     <a href="#corporate">法人のみなさまへ</a>
                     <a href="#about">会社概要</a>
                 </nav>
@@ -50,7 +52,7 @@
                     <a href="#home">ホーム</a>
                     <a href="#news">お知らせ</a>
                     <a href="#products">商品情報</a>
-                    <a href="#stores">店舗情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
                     <a href="#corporate">法人のみなさまへ</a>
                     <a href="#about">会社概要</a>
                 </nav>
@@ -285,14 +287,14 @@
                         <div class="shop-panel -left">
                             <!-- Prefecture Filters -->
                             <div class="prefecture-tabs">
-                                <button class="prefecture-tab active" data-tab="kinki">近畿地方</button>
-                                <button class="prefecture-tab" data-tab="chugoku">中国地方</button>
+                                <button class="js-prefecture-tab prefecture-tab active" data-tab="kinki">近畿地方</button>
+                                <button class="js-prefecture-tab prefecture-tab" data-tab="chugoku">中国地方</button>
                             </div>
 
                             <div class="prefecture-section" data-tab-content="kinki">
                                 <h3 class="prefecture-title">近畿地方</h3>
                                 <div class="prefecture-buttons">
-                                    <button class="prefecture-btn active" data-prefecture="京都府" data-image-index="01">
+                                    <button class="prefecture-btn js-prefecture-btn active" data-prefecture="京都府" data-image-index="01">
                                         京都府
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -333,7 +335,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="大阪府" data-image-index="02">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="大阪府" data-image-index="02">
                                         大阪府
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -350,7 +352,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="兵庫県" data-image-index="03">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="兵庫県" data-image-index="03">
                                         兵庫県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -367,7 +369,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="奈良県" data-image-index="04">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="奈良県" data-image-index="04">
                                         奈良県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -378,7 +380,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="和歌山県" data-image-index="05">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="和歌山県" data-image-index="05">
                                         和歌山県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -395,7 +397,7 @@
                             <div class="prefecture-section" data-tab-content="chugoku">
                                 <h3 class="prefecture-title">中国地方</h3>
                                 <div class="prefecture-buttons">
-                                    <button class="prefecture-btn" data-prefecture="鳥取県" data-image-index="06">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="鳥取県" data-image-index="06">
                                         鳥取県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -406,7 +408,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="島根県" data-image-index="07">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="島根県" data-image-index="07">
                                         島根県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -417,7 +419,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="岡山県" data-image-index="08">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="岡山県" data-image-index="08">
                                         岡山県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -428,7 +430,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="広島県" data-image-index="09">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="広島県" data-image-index="09">
                                         広島県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -439,7 +441,7 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <button class="prefecture-btn" data-prefecture="山口県" data-image-index="10">
+                                    <button class="prefecture-btn js-prefecture-btn" data-prefecture="山口県" data-image-index="10">
                                         山口県
                                         <div class="store-data" style="display: none;">
                                             <div class="store-item">
@@ -455,13 +457,13 @@
 
                             <!-- Map Image -->
                             <div class="map-container">
-                                <img id="prefecture-map" class="map-image" width="432" height="389" src="img/index/img-shopinfo01.webp" alt="">
+                                <img id="js-prefecture-map" class="map-image" width="432" height="389" src="img/index/img-shopinfo01.webp" alt="">
                             </div>
                         </div>
 
                         <!-- Right Panel: Store List -->
                         <div class="shop-panel">
-                            <h3 id="store-list-title" class="store-list-title">京都府（6店舗）</h3>
+                            <h3 id="js-store-list-title" class="store-list-title">京都府（6店舗）</h3>
                             <div class="title-divider"></div>
 
                             <!-- Store List -->
@@ -567,108 +569,107 @@
             </div>
         </section>
 
-        <!-- ABOUT Section -->
-        <section id="about" class="section -footer">
-            <div class="container">
-                <!-- Title -->
-                <div class="section-title -footer">
-                    <div class="title-dot-wrapper">
-                        <div class="title-dot"></div>
-                        <h2 class="title-en">COMPANY</h2>
-                    </div>
-                    <span class="title-ja">会社概要</span>
-                </div>
-
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Top Section -->
-        <div class="footer-top">
-            <!-- Left: Image -->
-            <div class="footer-image">
-                <img src="img/common/img-footer.webp" alt="">
-            </div>
+	<div class="footer-wrapper">
+		<section id="about" class="section -footer">
+			<div class="container">
+				<!-- Title -->
+				<div class="section-title -footer">
+					<div class="title-dot-wrapper">
+						<div class="title-dot"></div>
+						<h2 class="title-en">COMPANY</h2>
+					</div>
+					<span class="title-ja">会社概要</span>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<!-- Top Section -->
+			<div class="footer-top">
+				<!-- Left: Image -->
+				<div class="footer-image">
+					<img src="img/common/img-footer.webp" alt="">
+				</div>
 
-            <!-- Right: Company Info -->
-            <div class="footer-info">
-                <!-- Logo -->
-                <div class="footer-logo-box">
-                    <div class="logo">
-                        <img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
-                    </div>
-                </div>
+				<!-- Right: Company Info -->
+				<div class="footer-info">
+					<!-- Logo -->
+					<div class="footer-logo-box">
+						<div class="logo">
+							<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+						</div>
+					</div>
 
-                <!-- Address -->
-                <div class="footer-address">
-                    <p class="company-name">株式会社ジュンテンドー</p>
-                    <p>〒699-3676</p>
-                    <p>島根県益田市遠田町2179番地1</p>
-                    <p class="contact">TEL：（0856）24-2400（代表）</p>
-                    <p>FAX：（0856）24-2425</p>
-                </div>
+					<!-- Address -->
+					<div class="footer-address">
+						<p class="company-name">株式会社ジュンテンドー</p>
+						<p>〒699-3676</p>
+						<p>島根県益田市遠田町2179番地1</p>
+						<p class="contact">TEL：（0856）24-2400（代表）</p>
+						<p>FAX：（0856）24-2425</p>
+					</div>
 
-                <!-- CTA Button -->
-                <a href="#corporate" class="footer-cta-btn">CORPORATE SITE</a>
-            </div>
-        </div>
+					<!-- CTA Button -->
+					<a href="#corporate" class="footer-cta-btn">CORPORATE SITE</a>
+				</div>
+			</div>
 
-        <!-- Bottom Red Bar -->
-        <div class="footer-bottom">
-            <div class="container footer-container">
-                <div class="footer-bottom-content">
-                    <!-- Social Media Links -->
-                    <div class="social-links">
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <div class="social-icon">
-                                <img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
-                            </div>
-                        </a>
+			<!-- Bottom Red Bar -->
+			<div class="footer-bottom">
+				<div class="container footer-container">
+					<div class="footer-bottom-content">
+						<!-- Social Media Links -->
+						<div class="social-links">
+							<!-- Facebook -->
+							<a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
+								</div>
+							</a>
 
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <div class="social-icon">
-                                <img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
-                            </div>
-                        </a>
+							<!-- Instagram -->
+							<a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
+								</div>
+							</a>
 
-                        <!-- LINE -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <div class="social-icon social-icon-green">
-                                <img src="img/common/img-icon-line.svg" width="20" height="20" alt="LINE">
+							<!-- LINE -->
+							<a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon social-icon-green">
+									<img src="img/common/img-icon-line.svg" width="20" height="20" alt="LINE">
 
-                            </div>
-                        </a>
-                    </div>
+								</div>
+							</a>
+						</div>
 
-                    <!-- Navigation -->
-                    <nav class="footer-nav">
-                        <a href="#home">ホーム</a>
-                        <a href="#news">お知らせ</a>
-                        <a href="#products">商品情報</a>
-                        <a href="#stores">店舗情報</a>
-                        <a href="#corporate">法人のみなさまへ</a>
-                        <a href="#about">会社概要</a>
-                    </nav>
+						<!-- Navigation -->
+						<nav class="footer-nav">
+							<a href="#home">ホーム</a>
+							<a href="#news">お知らせ</a>
+							<a href="#products">商品情報</a>
+							<a href="/shoplist.html">店舗情報</a>
+							<a href="#corporate">法人のみなさまへ</a>
+							<a href="#about">会社概要</a>
+						</nav>
 
-                    <!-- Scroll to Top Button -->
-                    <button id="scroll-to-top" class="scroll-top-btn">
-                        <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
-                        </svg>
-                    </button>
-                </div>
+						<!-- Scroll to Top Button -->
+						<button id="scroll-to-top" class="scroll-top-btn">
+							<svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+							</svg>
+						</button>
+					</div>
 
-                <!-- Copyright -->
-                <div class="footer-copyright">
-                    Copyright©2025 JUNTENDO CO.,LTD.
-                </div>
-            </div>
-        </div>
-    </footer>
+					<!-- Copyright -->
+					<div class="footer-copyright">
+						Copyright©2025 JUNTENDO CO.,LTD.
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

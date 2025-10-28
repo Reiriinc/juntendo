@@ -100,7 +100,7 @@ $(document).ready(function() {
     (function initShopInfoImageByButtons() {
         const $img = $('#prefecture-map');
         if ($img.length === 0) return;
-        const $btns = $('.prefecture-btn');
+        const $btns = $('.js-prefecture-btn');
         $btns.each(function(i) {
             const idx = Math.min(i + 1, 10);
             $(this).attr('data-image-index', String(idx).padStart(2, '0'));
@@ -110,44 +110,55 @@ $(document).ready(function() {
         $img.attr('src', `img/index/img-shopinfo${initialIdx}.webp`);
     })();
 
-    $('.prefecture-btn').on('click', function() {
-        $('.prefecture-btn').removeClass('active');
+    $('.js-prefecture-btn').on('click', function() {
+        $('.js-prefecture-btn').removeClass('active');
         $(this).addClass('active');
 
         // ボタンの並びに応じた画像へ切替
         const idx = ($(this).attr('data-image-index') || '01').padStart(2, '0');
-        $('#prefecture-map').attr('src', `img/index/img-shopinfo${idx}.webp`);
+        $('#js-prefecture-map').attr('src', `img/index/img-shopinfo${idx}.webp`);
 
         updateStoreList();
     });
 
     function updateStoreList() {
-        const activeButton = $('.prefecture-btn.active');
+        const activeButton = $('.js-prefecture-btn.active');
         const prefecture = activeButton.data('prefecture');
         const storeData = activeButton.find('.store-data .store-item');
         const storeCount = storeData.length;
 
-        $('#store-list-title').text(`${prefecture}（${storeCount}店舗）`);
+        $('#js-store-list-title').text(`${prefecture}（${storeCount}店舗）`);
 
-        let html = '';
-        storeData.each(function(index) {
-            const $store = $(this);
-            const storeNameLink = $store.find('.store-name').html();
-            const storePostal = $store.find('.store-postal').text();
-            const storeAddress = $store.find('.store-address').text();
-            const storeTel = $store.find('.store-tel').text();
-            const borderClass = index < storeCount - 1 ? 'border-bottom' : '';
+        // shoplist.htmlかどうかを判定（data-prefecture属性があるかで判断）
+        const isShoplistPage = $('#store-list .store-item[data-prefecture]').length > 0;
+        
+        if (isShoplistPage) {
+            // shoplist.htmlの場合：表示/非表示で切り替え
+            $('#store-list .store-item').hide();
+            const visibleStores = $(`#store-list .store-item[data-prefecture="${prefecture}"]`);
+            visibleStores.show();
+        } else {
+            // index.htmlの場合：動的に生成
+            let html = '';
+            storeData.each(function(index) {
+                const $store = $(this);
+                const storeNameLink = $store.find('.store-name').html();
+                const storePostal = $store.find('.store-postal').text();
+                const storeAddress = $store.find('.store-address').text();
+                const storeTel = $store.find('.store-tel').text();
+                const borderClass = index < storeCount - 1 ? 'border-bottom' : '';
+                
+                html += `
+              <div class="store-item ${borderClass}">
+                <h4 class="store-name">${storeNameLink}</h4>
+                <p class="store-info">${storePostal}　${storeAddress}</p>
+                <p class="store-info">TEL：${storeTel}</p>
+              </div>
+            `;
+            });
             
-            html += `
-          <div class="store-item ${borderClass}">
-            <h4 class="store-name">${storeNameLink}</h4>
-            <p class="store-info">${storePostal}　${storeAddress}</p>
-            <p class="store-info">TEL：${storeTel}</p>
-          </div>
-        `;
-        });
-
-        $('#store-list').html(html);
+            $('#store-list').html(html);
+        }
     }
 
     updateStoreList();
@@ -171,11 +182,11 @@ $(document).ready(function() {
     });
 
     // Prefecture tabs functionality
-    $('.prefecture-tab').on('click', function() {
+    $('.js-prefecture-tab').on('click', function() {
         const tabId = $(this).data('tab');
 
         // Remove active class from all tabs
-        $('.prefecture-tab').removeClass('active');
+        $('.js-prefecture-tab').removeClass('active');
         // Add active class to clicked tab
         $(this).addClass('active');
 
@@ -185,7 +196,17 @@ $(document).ready(function() {
         $(`[data-tab-content="${tabId}"]`).show();
 
         // Reset prefecture buttons to first one and trigger click
-        $(`[data-tab-content="${tabId}"] .prefecture-btn`).removeClass('active').first().addClass('active').trigger('click');
+        $(`[data-tab-content="${tabId}"] .js-prefecture-btn`).removeClass('active').first().addClass('active').trigger('click');
+    });
+
+    // Header scroll effect - add border when scrolled
+    $(window).on('scroll', function() {
+        const scrollTop = $(window).scrollTop();
+        if (scrollTop > 0) {
+            $('.header').addClass('scrolled');
+        } else {
+            $('.header').removeClass('scrolled');
+        }
     });
 
 });
