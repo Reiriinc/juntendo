@@ -88,7 +88,13 @@ HERO SECTION
 
 @media (max-width: 768px) {
 	.breadcrumb-wrapper {
-		height: 144px;
+		bottom: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.breadcrumb-wrapper {
+		height: 104px;
 		padding-bottom: 2.4rem;
 	}
 }
@@ -121,7 +127,7 @@ HERO SECTION
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 300px;
+        min-height: 190px;
     }
     
     .hero-banner {
@@ -146,11 +152,17 @@ SHOP INFO SECTION
 	padding: 7.2rem 0 0 2.4rem!important;
 }
 
+@media (max-width: 768px) {
+	.p-shop-info-section {
+		padding: 11.2rem 0 0 0!important;
+	}
+}
+
 .p-shop-info-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 1.6rem;
+	margin-bottom: 0.8rem;
 }
 
 @media (max-width: 768px) {

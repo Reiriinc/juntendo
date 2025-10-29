@@ -206,14 +206,16 @@ HEADER
 	transition: border-bottom 0.3s ease;
 }
 
-.header-inner {
-    background-color: #ffffff;
-    position: absolute;
-    z-index: 10000;
-    top: 0;
-    width: 100%;
-	left: 0;
-    padding-left: 2rem;
+@media (max-width: 768px) {
+	.header-inner {
+		background-color: #ffffff;
+		position: absolute;
+		z-index: 10000;
+		top: 0;
+		width: 100%;
+		left: 0;
+		padding-left: 2rem;
+	}
 }
 
 .header.scrolled {
