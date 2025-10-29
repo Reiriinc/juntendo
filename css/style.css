@@ -55,6 +55,7 @@ button {
 	font-size: 2rem;
 	line-height: 2.7rem;
 	color: #333333;
+	font-weight: 400;
 }
 
 @media (max-width: 768px) {
