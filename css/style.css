@@ -207,6 +207,12 @@ HEADER
 }
 
 @media (max-width: 768px) {
+	.header {
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px) {
 	.header-inner {
 		background-color: #ffffff;
 		position: absolute;
@@ -232,6 +238,10 @@ HEADER
 @media (max-width: 768px) {
 	.header-content {
 		height: 64px;
+		background-color: #ffffff;
+		position: relative;
+        z-index: 100000;
+        padding: 0 2rem;
 	}
 }
 
@@ -299,7 +309,6 @@ HEADER
 
 
 /* モバイルナビゲーション */
-
 .nav-mobile {
 	display: none;
 	position: fixed;
@@ -313,8 +322,10 @@ HEADER
 	-webkit-overflow-scrolling: touch;
 }
 
+@media (max-width: 768px) {
 .nav-mobile.active {
 	display: block;
+}
 }
 
 .nav-mobile nav {

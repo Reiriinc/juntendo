@@ -181,6 +181,27 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
 
+    // --- Close hamburger menu when viewport is >= 768px ---
+    function closeMobileMenu() {
+        $('#mobile-menu-btn').removeClass('active')
+            .attr('aria-expanded', 'false')
+            .html(hamburgerSvg);
+        $('#mobile-menu').removeClass('active');
+        $('body').removeClass('no-scroll');
+    }
+
+    // On first load
+    if (window.innerWidth >= 768) {
+        closeMobileMenu();
+    }
+
+    // On resize
+    $(window).on('resize', function() {
+        if (window.innerWidth >= 768) {
+            closeMobileMenu();
+        }
+    });
+
     // Prefecture tabs functionality
     $('.js-prefecture-tab').on('click', function() {
         const tabId = $(this).data('tab');
