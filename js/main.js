@@ -33,6 +33,18 @@ $(document).ready(function() {
         $('body').removeClass('no-scroll');
     });
 
+    // Close when clicking outside the nav (on the overlay background)
+    $('#mobile-menu').on('click', function(e) {
+        // If the click is NOT inside the inner <nav>, treat as backdrop click
+        if ($(e.target).closest('nav').length === 0) {
+            $('#mobile-menu-btn').removeClass('active')
+                .attr('aria-expanded', 'false')
+                .html(hamburgerSvg);
+            $('#mobile-menu').removeClass('active');
+            $('body').removeClass('no-scroll');
+        }
+    });
+
 
 
     const upperSwiper = new Swiper('.upper-swiper', {
