@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ | ジュンテンドー - JUNTENDO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/news.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+					<a href="/">
+                    	<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+                	</a>
+				</div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="/iteminfo.html">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile" id="mobile-menu">
+            <div class="container">
+                <nav>
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="/iteminfo.html">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="page-title" class="hero-section">
+			<div class="hero-banner-wrapper">
+				<div class="hero-banner">
+					<div class="hero-banner-content">
+						<h1 class="hero-title-en">NEWS</h1>
+						<h2 class="hero-title-ja">お知らせ</h2>
+					</div>
+				</div>
+			</div>
+			<div class="breadcrumb-wrapper">
+				<div class="breadcrumb">
+					<a href="index.html">HOME</a>
+					<span>—</span>
+					<span>お知らせ</span>
+				</div>
+			</div>
+        </section>
+
+			<section id="p-news" class="section p-news-section">
+
+				<!-- RECOMMENDATION Section -->
+				<section class="p-news-subsection">
+					<div class="p-news-list-wrapper container">
+						<!-- Filter Buttons -->
+						<div class="p-news-filter">
+							<button class="p-news-filter-btn active" data-filter="全て">全て</button>
+							<button class="p-news-filter-btn" data-filter="キャンペーン・フェア">キャンペーン・フェア</button>
+							<button class="p-news-filter-btn" data-filter="店舗からのお知らせ">店舗からのお知らせ</button>
+							<button class="p-news-filter-btn" data-filter="その他のお知らせ">その他のお知らせ</button>
+						</div>
+
+						<!-- News List -->
+						<div class="p-news-list" id="p-news-list">
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.06.06</span>
+								<p class="p-news-title">フマキラーキャンペーン実施中</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.05.27</span>
+								<p class="p-news-title">6月のポイントサービスデー</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.03.11</span>
+								<p class="p-news-title">農業資材フェア第二弾開催中！</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">店舗からのお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.01.23</span>
+								<p class="p-news-title">新南陽店 営業再開のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">その他のお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2024.09.25</span>
+								<p class="p-news-title">いきいきポイント付与ルール変更のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.05.27</span>
+								<p class="p-news-title">6月のポイントサービスデー</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.03.11</span>
+								<p class="p-news-title">農業資材フェア第二弾開催中！</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">店舗からのお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.01.23</span>
+								<p class="p-news-title">新南陽店 営業再開のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">その他のお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2024.09.25</span>
+								<p class="p-news-title">いきいきポイント付与ルール変更のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.05.27</span>
+								<p class="p-news-title">6月のポイントサービスデー</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.03.11</span>
+								<p class="p-news-title">農業資材フェア第二弾開催中！</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">店舗からのお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.01.23</span>
+								<p class="p-news-title">新南陽店 営業再開のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">その他のお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2024.09.25</span>
+								<p class="p-news-title">いきいきポイント付与ルール変更のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.05.27</span>
+								<p class="p-news-title">6月のポイントサービスデー</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.03.11</span>
+								<p class="p-news-title">農業資材フェア第二弾開催中！</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">店舗からのお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.01.23</span>
+								<p class="p-news-title">新南陽店 営業再開のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">その他のお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2024.09.25</span>
+								<p class="p-news-title">いきいきポイント付与ルール変更のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">キャンペーン・フェア</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.03.11</span>
+								<p class="p-news-title">農業資材フェア第二弾開催中！</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">店舗からのお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2025.01.23</span>
+								<p class="p-news-title">新南陽店 営業再開のお知らせ</p>
+								</div>
+							</a>
+							<a href="news-detail.html" class="p-news-item">
+								<span class="p-news-category">その他のお知らせ</span>
+								<div class="p-news-item-content">
+								<span class="p-news-date">2024.09.25</span>
+								<p class="p-news-title">いきいきポイント付与ルール変更のお知らせ</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+    </main>
+
+	<div class="footer-wrapper">
+		<section id="about" class="section -footer">
+			<div class="container">
+				<!-- Title -->
+				<div class="section-title -footer">
+					<div class="title-dot-wrapper">
+						<div class="title-dot"></div>
+						<h2 class="title-en">COMPANY</h2>
+					</div>
+					<span class="title-ja">会社概要</span>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<!-- Top Section -->
+			<div class="footer-top">
+				<!-- Left: Image -->
+				<div class="footer-image">
+					<img src="img/common/img-footer.webp" alt="">
+				</div>
+
+				<!-- Right: Company Info -->
+				<div class="footer-info">
+					<!-- Logo -->
+					<div class="footer-logo-box">
+						<div class="logo">
+							<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+						</div>
+					</div>
+
+					<!-- Address -->
+					<div class="footer-address">
+						<p class="company-name">株式会社ジュンテンドー</p>
+						<p>〒699-3676</p>
+						<p>島根県益田市遠田町2179番地1</p>
+						<p class="contact"><span>TEL</span>（0856）24-2400（代表）</p>
+						<p>FAX：（0856）24-2425</p>
+					</div>
+
+					<!-- CTA Button -->
+					<a href="#corporate" class="footer-cta-btn">CORPORATE SITE</a>
+				</div>
+			</div>
+
+			<!-- Bottom Red Bar -->
+			<div class="footer-bottom">
+				<div class="container footer-container">
+					<div class="footer-bottom-content">
+						<!-- Social Media Links -->
+						<div class="social-links">
+							<!-- Facebook -->
+							<a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
+								</div>
+							</a>
+
+							<!-- Instagram -->
+							<a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
+								</div>
+							</a>
+
+							<!-- LINE -->
+							<a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon social-icon-green">
+									<img src="img/common/img-icon-line.svg" width="20" height="20" alt="LINE">
+
+								</div>
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer-nav">
+							<a href="#home">ホーム</a>
+							<a href="#news">お知らせ</a>
+							<a href="/iteminfo.html">商品情報</a>
+							<a href=/shoplist.html">店舗情報</a>
+							<a href="#corporate">法人のみなさまへ</a>
+							<a href="#about">会社概要</a>
+						</nav>
+
+						<!-- Scroll to Top Button -->
+						<button id="scroll-to-top" class="scroll-top-btn">
+							<svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+							</svg>
+						</button>
+					</div>
+
+					<!-- Copyright -->
+					<div class="footer-copyright">
+						Copyright©2025 JUNTENDO CO.,LTD.
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Page Script -->
+    <script src="js/news.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
