@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いきいきBIZカード | ジュンテンドー - JUNTENDO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bizcard.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+					<a href="/">
+                    <img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+                	</a>
+				</div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="/iteminfo.html">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile" id="mobile-menu">
+            <div class="container">
+                <nav>
+                    <a href="#home">ホーム</a>
+                    <a href="#news">お知らせ</a>
+                    <a href="/iteminfo.html">商品情報</a>
+                    <a href="/shoplist.html">店舗情報</a>
+                    <a href="#corporate">法人のみなさまへ</a>
+                    <a href="#about">会社概要</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="page-title" class="hero-section">
+			<div class="hero-banner-wrapper">
+				<div class="hero-banner">
+					<div class="hero-banner-content">
+						<h1 class="hero-title-en">POINT CARD</h1>
+						<h2 class="hero-title-ja">ポイントカード</h2>
+					</div>
+				</div>
+			</div>
+			<div class="breadcrumb-wrapper">
+				<div class="breadcrumb">
+					<a href="index.html">HOME</a>
+					<span>—</span>
+					<a href="index.html">ポイントカード</a>
+					<span>—</span>
+					<span>いきいきBIZカード</span>
+				</div>
+			</div>
+        </section>
+
+        <!-- Campaign-banner Section-->
+        <section class="p-campaign_banner section">
+            <div class="container">
+                <div class="banner">
+                    <img src="./img/bizcard/banner01.svg" alt="Web入会キャンペーン開催！" class="pc_block">
+                    <img src="./img/bizcard/banner01_sp.svg" alt="Web入会キャンペーン開催！" class="sp_block">
+                </div>
+                <div class="banner">
+                    <img src="./img/bizcard/banner02.svg" alt="新規ご入会さま限定！" class="pc_block">
+                    <img src="./img/bizcard/banner02_sp.svg" alt="新規ご入会さま限定！" class="sp_block">
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Section-->
+        <section class="p-bizcard_section section">
+            <div class="container">
+                <h3 id="js-card-title" class="card-title">いきいきBIZカード</h3>
+            <p class="card_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+            <div class="p-card-wrapper">
+                <div class="p-card container">
+                    <div class="card_left">
+                        <img src="./img/bizcard/card01.webp" alt="いきいきBIZカード">
+                    </div>
+                    <div class="right_text">
+                        <h4><span>入会金も年会費も永年無料！</span>いきいきBIZカード</h4>
+                        <p class="card_text">※次年度以降は1,375円年会費がかかります。<br>
+                            （前年度カードショッピング利用が10万円以上で無料）</p>
+                        <ul class="check_list">
+                            <li>クレジット決済でポイント3倍！<br>
+                                いきいきクレジット会員様はお買上げ220円（税込）ごとに<br>
+                                いきいきポイント2pt+<br>
+                                いきいきクレジットポイント1pt=合計3ポイントゲット！</li>
+                            <li>ポイントは値引きで還元！500ポイントで500円値引き</li>
+                            <li>ジュンテンドー以外のお買い物も200円ごとに1ポイント！</li>
+                            <li>便利な据置払い<br>
+                                ジュンテンドーでのお買い物で据置払いが利用可能<br>
+                                最大7ヶ月後に！（例：10/10にお買い物→5月に引落し）</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="last_text container">ポイント倍率セール及び商品倍率セール時には、ステージ制ポイント倍率は適応されません。</p>
+            </div>
+        </section>
+
+        <!-- Table Section-->
+        <section class="p-table_section section">
+            <div class="container">
+                <table class="comparison-table">
+                    <tbody>
+                        <tr>
+                            <th>カードの種類</th>
+                            <td>Sタイプ (セレクト)</td>
+                            <td>Sタイプ (セレクト)</td>
+                        </tr>
+                        <tr>
+                            <th>カードの入会条件</th>
+                            <td>個人事業主様</td>
+                            <td>法人代表者様</td>
+                        </tr>
+                        <tr>
+                            <th>カード発行枚数</th>
+                            <td>1枚</td>
+                            <td>最大4枚</td>
+                        </tr>
+                        <tr>
+                            <th>ご利用可能限度額</th>
+                            <td colspan="2" class="-center">10万～200万円</td>
+                        </tr>
+                        <tr>
+                            <th>お支払い方法</th>
+                            <td colspan="2">
+                                ・一括払い<br>
+                                ・分割払い (2・5・6・10・12・15・20・24回)<br>
+                                リボルビング払い<br>
+                                ボーナス据置 (収穫期) 一括払い 0～6ヶ月<br>
+                                毎月末締め、翌月27日払い
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>お支払い口座</th>
+                            <td>屋号+個人名義または個人名義</td>
+                            <td>法人名義</td>
+                        </tr>
+                        <tr>
+                            <th>キャッシング機能</th>
+                            <td>あり</td>
+                            <td>あり</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-cta-wrapper">
+                    <a href="#" class="table-cta-button">
+                        <span class="button-line1">いきいきクレジットカード for Biz</span>
+                        <span class="button-line2">お申し込みはこちら</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- faq -->
+        <section class="p-faq section">
+            <div class="container">
+            <div class="section-title">
+                <div class="title-dot-wrapper">
+                    <div class="title-dot"></div>
+                    <h2 class="title-en">Q&A</h2>
+                </div>
+                <span class="title-ja">よくある質問</span>
+            </div>
+        </div>
+            <div class="faq">
+            <div class="faq-list fade-item container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                    <span class="flex"><span class="red">Q1</span>いきいきBIZカードに入会したいのですが、手続きの方法を教えて下さい。</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer_text"><span class="red">A</span>インターネット又は店舗でご入会手続きが行えます。<br>
+                        尚、店舗にて入会の際は本人確認資料（運転免許証など）等が必要となりますので、忘れずにお持ち下さい。<br>
+                        詳しくはお近くの店舗にお問い合わせ下さい。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q2</span>入会基準はありますか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text">
+                        <span class="red">A</span>
+                        農家や職人さんなどの個人事業主（自営業）の方、法人代表者の方などです。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q3</span>入会金や年会費は必要ですか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text">
+                        <span class="red">A</span>
+                        入会金、初回年会費は無料です。次年度より年会費1,375円が掛かりますが、<br>
+                        年間クレジット利用金額が10万円以上の方はご利用年度の年会費が無料になります。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                    <span class="flex"><span class="red">Q4</span>いきいきBIZカードは、ジュンテンドー以外のお店でも使えますか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text"><span class="red">A</span>
+                        クレジット機能が付いておりますので、マスターカード取扱店でしたらご利用いただけます。<br>
+                        この場合、クレジット利用額200円につき「いきいきクレジットポイント」が1ポイントつきます。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q5</span>いきいきBIZカードのメリットを教えてください。</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text"><span class="red">A</span>
+                        <ul class="answer_list">
+                            <li>ショッピング利用限度額が30～200万円。</li>
+                            <li>購入代金が、月末締めの翌月27日引き落としの為、資金繰りに余裕が生まれます。</li>
+                            <li>据置一括払い（収穫期払い）で引き落とし日を金利手数料無しの最大7ヶ月後に設定可能です。</li>
+                            <li>会社での経理処理の負担を軽減します。</li>
+                            <li>お買上時にポイントがつきます！</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q6</span>いきいきBIZカードの発行までどのくらい日数がかかりますか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text">
+                        <span class="red">A</span>本カードは、約1ヶ月でお手元に届きます。
+                        <br>ご本人確認が取れない等の理由でカード発行が遅れる場合もございますが、ご了承ください。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q7</span>いきいきBIZカードを発行するまでにカード会社との電話や書類のやり取りはどのようなものがありますか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text">
+                        <span class="red">A</span>
+                        Sタイプのカードのキャッシング機能付きをご希望のお客様に関しては、<br>
+                        カード会社に確定申告書又は、事業計画書、資金繰り表などのコピーを提出していただく必要があります。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q8</span>いきいきクレジットカードとは何が違うのですか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text">
+                        <span class="red">A</span>
+                        いきいきクレジットカードは個人名、個人口座での契約ですが、<br class="pc_block">
+                        BIZカードは個人事業主又は、法人代表者名、屋号又は法人名義口座で作成できます。<br>
+                        尚、BIZカードは個人事業主用としてSタイプ、法人代表者向けのMタイプの2種類をご用意しています。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q9</span>SタイプとMタイプの違いは何ですか？</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text"><span class="red">A</span>
+                        <ul class="answer_list">
+                            <li>Sタイプのカードはキャッシング機能が付きますが、カード発行枚数は1枚です。<br>
+                                尚、引落口座は屋号名義又は個人名義で契約となります。</li>
+                            <li>Mタイプのカードはキャッシング機能はありませんが、最大4枚までカード発行が可能ですので、<br>
+                                社長用が1枚、従業員用に3枚といったような契約が可能です。<br>
+                                尚、引落口座は法人名義口座の契約となります。</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q10</span>入会時の記入内容（登録内容）を変更したいのですが。</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                    <div class="faq-answer_text"><span class="red">A</span>恐れ入りますが、カード会社に直接ご連絡ください。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-list fade-item container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="flex"><span class="red">Q11</span>いきいきポイントカードに変更したいのですが。（ポイントカードだけが欲しいのですが。）</span>
+                    <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer_text"><span class="red">A</span>
+                            変更は可能です。<br>
+                            サービスカウンターにて切替手続き（いきいきポイントカードへの入会手続き含む）をお願いします。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq_cta container">
+        <a href="/privacy-policy.html" class="cta-btn">個人情報の取り扱いについて</a>
+        </div>
+        </div>
+        </section>
+
+    </main>
+
+	<div class="footer-wrapper">
+		<section id="about" class="section -footer">
+			<div class="container">
+				<!-- Title -->
+				<div class="section-title -footer">
+					<div class="title-dot-wrapper">
+						<div class="title-dot"></div>
+						<h2 class="title-en">COMPANY</h2>
+					</div>
+					<span class="title-ja">会社概要</span>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<!-- Top Section -->
+			<div class="footer-top">
+				<!-- Left: Image -->
+				<div class="footer-image">
+					<img src="img/common/img-footer.webp" alt="">
+				</div>
+
+				<!-- Right: Company Info -->
+				<div class="footer-info">
+					<!-- Logo -->
+					<div class="footer-logo-box">
+						<div class="logo">
+							<img src="img/common/img-logo.webp" width="150" height="60" alt="JUNTENDO" />
+						</div>
+					</div>
+
+					<!-- Address -->
+					<div class="footer-address">
+						<p class="company-name">株式会社ジュンテンドー</p>
+						<p>〒699-3676</p>
+						<p>島根県益田市遠田町2179番地1</p>
+						<p class="contact"><span>TEL</span>（0856）24-2400（代表）</p>
+						<p>FAX：（0856）24-2425</p>
+					</div>
+
+					<!-- CTA Button -->
+					<a href="#corporate" class="footer-cta-btn">CORPORATE SITE</a>
+				</div>
+			</div>
+
+			<!-- Bottom Red Bar -->
+			<div class="footer-bottom">
+				<div class="container footer-container">
+					<div class="footer-bottom-content">
+						<!-- Social Media Links -->
+						<div class="social-links">
+							<!-- Facebook -->
+							<a href="https://www.facebook.com/61566619903513" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-facebook.svg" width="20" height="20" alt="Facebook">
+								</div>
+							</a>
+
+							<!-- Instagram -->
+							<a href="https://www.instagram.com/juntendo_official/" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon">
+									<img src="img/common/img-icon-instagram.svg" width="20" height="20" alt="Instagram">
+								</div>
+							</a>
+
+							<!-- LINE -->
+							<a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+								<div class="social-icon social-icon-green">
+									<img src="img/common/img-icon-line.svg" width="20" height="20" alt="LINE">
+
+								</div>
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer-nav">
+							<a href="#home">ホーム</a>
+							<a href="#news">お知らせ</a>
+							<a href="/iteminfo.html">商品情報</a>
+							<a href="/shoplist.html">店舗情報</a>
+							<a href="#corporate">法人のみなさまへ</a>
+							<a href="#about">会社概要</a>
+						</nav>
+
+						<!-- Scroll to Top Button -->
+						<button id="scroll-to-top" class="scroll-top-btn">
+							<svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+							</svg>
+						</button>
+					</div>
+
+					<!-- Copyright -->
+					<div class="footer-copyright">
+						Copyright©2025 JUNTENDO CO.,LTD.
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Youtube API -->
+    <script src="js/youtubeapi.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- フェードイン（そのまま） ---
+            const targets = document.querySelectorAll('.fade-item');
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+                }
+            });
+            }, { threshold: 0.1 });
+            targets.forEach(target => observer.observe(target));
+
+            // --- アコーディオン ---
+            const items = document.querySelectorAll('.faq-item');
+
+            // 初期表示：active にだけ高さを設定
+            items.forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+            // クリックで開閉
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // 1つだけ開く場合は一旦全て閉じる
+                items.forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+                });
+                // クリックしたものを開く/閉じる
+                if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+            });
+        });
+        </script>
+
+</body>
+
+</html>
