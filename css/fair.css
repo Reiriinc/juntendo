@@ -1,0 +1,246 @@
+/* ============================================
+HERO SECTION
+============================================ */
+
+.hero-section {
+  position: relative;
+  min-height: 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: -80px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 0;
+    margin-bottom: -114px;
+  }
+}
+
+.hero-banner-wrapper {
+  padding: 0 2.4rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-banner {
+  background-color: #ca1528;
+  width: 100%;
+  max-width: 1024px;
+  padding: 4.3rem 2rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner-content {
+  color: white;
+}
+
+.hero-title-en {
+  font-size: 1.8rem;
+  font-family: "Avenir", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .hero-title-en {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin: 0 0 0.4rem 0;
+  }
+}
+
+.hero-title-ja {
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .hero-title-ja {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+}
+
+.breadcrumb-wrapper {
+  background-color: #f1ede7;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 3.2rem;
+  position: relative;
+  bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-wrapper {
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-wrapper {
+    height: 104px;
+    padding-bottom: 2.4rem;
+  }
+}
+
+.breadcrumb {
+  font-size: 1.2rem;
+  color: #555;
+  display: flex;
+  gap: 0.8rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: content-box;
+}
+
+.breadcrumb a {
+  color: #333;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #dc2626;
+}
+
+.breadcrumb span {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 190px;
+  }
+
+  .hero-banner {
+    width: 100%;
+    padding: 2.1rem 1.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .breadcrumb {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+/* ============================================
+ SECTION
+============================================ */
+
+.p-fair-store {
+  color: #dd0c1f;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2.8rem;
+}
+@media (max-width: 768px) {
+  .p-fair-store {
+    padding-bottom: 5rem;
+  }
+}
+
+.p-fair-store span {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-left: 32px;
+}
+@media (max-width: 768px) {
+  .p-fair-store span {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.8rem;
+  }
+}
+
+h3.p-fair-pref {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 2.8rem;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+h3.p-fair-pref::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 4.2rem;
+  background-color: #dd0c1f;
+}
+
+.p-store {
+  display: grid;
+  grid-template-columns: 120px 132px auto 133px;
+  column-gap: 3.3rem;
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  border-bottom: 1px solid #ededed;
+}
+
+@media (max-width: 768px) {
+  .p-store {
+    grid-template-columns: 1fr;
+  }
+}
+
+.store-contact {
+  position: relative;
+  padding-left: 2.1rem;
+}
+.store-contact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url("../img/fair/icon_tel.svg") no-repeat center;
+}
+
+.view-more-btn {
+  min-width: 120px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  padding: 1.1rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .p-store .view-more-btn {
+    margin-top: 0.8rem;
+  }
+}
