@@ -145,7 +145,50 @@ HERO SECTION
 /* ============================================
  SECTION
 ============================================ */
+@media (max-width: 768px) {
+  .title-ja {
+    margin-top: -0.3rem;
+  }
+}
 
+.p-fair-info-section {
+  padding: 8rem 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .p-fair-info-section {
+    padding: 12rem 2.4rem 8rem;
+  }
+}
+
+.p-fair-info-section .section-title-wrapper {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.p-fair-banner {
+  margin-top: 3.2rem;
+}
+@media (max-width: 768px) {
+  .p-fair-banner {
+    margin-top: 4rem;
+  }
+}
+
+.p-fair-banner .view-more-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .p-fair-banner .view-more-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+  }
+}
+
+.p-fair-store-list {
+  padding-bottom: 0;
+}
 .p-fair-store {
   color: #dd0c1f;
   font-size: 2rem;
@@ -172,13 +215,20 @@ HERO SECTION
     margin-top: 0.8rem;
   }
 }
+.p-fair-store-pref {
+  margin-bottom: 6.7rem;
+}
+
+.p-fair-store-pref:last-child {
+  margin-bottom: 0;
+}
 
 h3.p-fair-pref {
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-weight: 600;
   color: #555555;
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.7rem;
   position: relative;
   padding-left: 1.6rem;
 }
