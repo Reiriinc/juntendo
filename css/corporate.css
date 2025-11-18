@@ -3,22 +3,6 @@
     --color-red: #CA1528;
 }
 
-.pc-block {
-    display: block;
-}
-.sp-block {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .pc-block {
-        display: none;
-    }
-    .sp-block {
-        display: block;
-    }
-}
-
 body{
     color: #555;
 }
@@ -806,6 +790,12 @@ INFO
 
 .p-corporate-info-list {
     list-style: none;
+}
+@media (max-width: 768px) {
+    .p-corporate-info-list {
+        max-width: 310px;
+        margin: 0 auto;
+    }
 }
 
 .p-corporate-info-list li {

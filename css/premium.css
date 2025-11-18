@@ -3,22 +3,6 @@
     --color-red: #CA1528;
 }
 
-.pc-block {
-    display: block;
-}
-.sp-block {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .pc-block {
-        display: none;
-    }
-    .sp-block {
-        display: block;
-    }
-}
-
 body{
     color: #555;
 }
@@ -433,7 +417,7 @@ PAGE COMMON
 }
 
 .p-premium-system-box1 .row1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 @media (max-width: 768px) {
