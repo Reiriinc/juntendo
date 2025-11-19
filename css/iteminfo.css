@@ -144,8 +144,18 @@ HERO SECTION
 ITEM INFO SECTION
 ============================================ */
 
-.p-item-info-section {
+.p-item-info {
 	padding: 7.2rem 0 12rem 0!important;
+}
+
+@media (max-width: 768px) {
+	.p-item-info {
+		padding: 11.2rem 0 8rem 0!important;
+	}
+}
+
+.p-item-info-section {
+	padding: 0!important;
 }
 
 @media (max-width: 768px) {
@@ -170,8 +180,8 @@ ITEM INFO SECTION
 		}
 	}
 
-.p-item-info-section .section-title-wrapper{
-	padding: 0;
+ .section-title-wrapper{
+	padding: 0!important;
 }
 
 .p-item-info-header {
@@ -179,13 +189,23 @@ ITEM INFO SECTION
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 0.8rem;
-	margin-left: 2.4rem;
+}
+
+@media (max-width: 1024px) {
+	.p-item-info-header {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 768px) {
 	.p-item-info-header {
 		margin-bottom:3.2rem;
+		margin-bottom: 4rem;
 	}
+}
+
+.p-item-info-header.-second {
+	margin-left: 2.4rem;
 }
 
 @media (max-width: 768px) {
@@ -193,10 +213,6 @@ ITEM INFO SECTION
 		font-size: 2.7rem;
 		line-height: 3.6rem;
 	}
-}
-
-.p-item-info-header.-second {
-	margin-bottom: 4rem;
 }
 
 .p-item-info-header .title-ja{
