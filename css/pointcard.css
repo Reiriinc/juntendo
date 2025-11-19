@@ -403,12 +403,12 @@ span.p-card-red {
 /* faq */
 .p-faq {
   position: relative;
-  padding: 3.2rem 0 !important;
+  padding: 3.2rem 0 12rem 0 !important;
 }
 
 @media (max-width: 768px) {
   .p-faq {
-    padding: 0 !important;
+    padding: 0 0 8rem 0 !important;
   }
 }
 
