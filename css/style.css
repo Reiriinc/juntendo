@@ -290,6 +290,7 @@ HEADER
 	background-color: #dc2626;
 	color: white;
 	position: fixed;
+	top: 1.2rem;
 	right: 0;
 	padding: 3px 14px;
 	border-radius: 10px 0 0 10px;
