@@ -240,13 +240,13 @@ STORE LIST SECTION
 ============================================ */
 
 .p-store-list-section {
-	padding: 7.2rem 2.4rem  0 2.4rem!important;
+	padding: 7.2rem 2.4rem  12rem 2.4rem!important;
 	background-color: #fff;
 }
 
 @media (max-width: 768px) {
 	.p-store-list-section {
-		padding: 3.2rem 0 0 0!important;
+		padding: 3.2rem 0 8rem 0!important;
 	}
 }
 

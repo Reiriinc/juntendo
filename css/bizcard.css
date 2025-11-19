@@ -467,12 +467,12 @@ ul.check_list li::before{
 /* faq */
 .p-faq{
     position: relative;
-    padding: 6.4rem 0!important;
+	padding: 6.4rem 0 12rem !important;
 }
 
 @media (max-width: 768px) {
     .p-faq{
-        padding: 0!important;
+		padding: 0 0 8rem !important;
     }
 }
 

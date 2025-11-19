@@ -145,12 +145,12 @@ ITEM INFO SECTION
 ============================================ */
 
 .p-item-info-section {
-	padding: 7.2rem 0 0 0!important;
+	padding: 7.2rem 0 12rem 0!important;
 }
 
 @media (max-width: 768px) {
 	.p-item-info-section {
-		padding: 11.2rem 0 0 0!important;
+		padding: 11.2rem 0 8rem 0!important;
 	}
 }
 

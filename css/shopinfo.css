@@ -164,6 +164,15 @@ HERO SECTION
 /* ============================================
 PAGE COMMON
 ============================================ */
+.p-shopinfo-section {
+	padding: 0 0 12rem 0 !important;
+}
+@media (max-width: 768px) {
+    .p-shopinfo-section {
+        padding: 0 0 8rem 0 !important;
+    }
+}
+
 .p-shopinfo-container {
     max-width: 1024px;
     margin: 0 auto;
@@ -595,7 +604,7 @@ PAGE COMMON
 戻るボタン
 ============================================ */
 .p-shopinfo-back {
-     padding: 8rem 0;
+     padding: 8rem 0 0;
 }
 @media (max-width: 768px) {
     .p-shopinfo-back {
