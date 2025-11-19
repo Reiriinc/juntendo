@@ -554,6 +554,7 @@ SHOP INFO SECTION
 		background: none;
 		border: none;
 		color: #555;
+		background-color: #fff;
 		font-size: 2rem;
 		font-weight: 600;
 		cursor: pointer;
@@ -575,7 +576,7 @@ SHOP INFO SECTION
 	}
 
 	.prefecture-tab:hover {
-		opacity: 0.7;
+		opacity: 1;
 	}
 }
 
@@ -706,17 +707,16 @@ SHOP INFO SECTION
 }
 
 .store-list::-webkit-scrollbar-track {
-	background: #f1f1f1;
 	border-radius: 10px;
 }
 
 .store-list::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #D9D9D9;
 	border-radius: 10px;
 }
 
 .store-list::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: #D9D9D9;
 }
 
 /* swiper */
@@ -724,10 +724,6 @@ SHOP INFO SECTION
 
 .store-item {
 	padding: 0 0 2.4rem;
-}
-
-.store-item.border-bottom {
-	border-bottom: 1px solid #e5e7eb;
 }
 
 .store-name {
@@ -815,10 +811,6 @@ POINT CARD SECTION
 	}
 }
 
-.point-card-grid {
-	padding: 2rem 2rem 3.2rem;
-}
-
 .point-card-grid-wrapper {
 	position: relative;
 }
@@ -864,7 +856,7 @@ POINT CARD SECTION
 	display: flex;
 	justify-content: space-between;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 2rem;
 	padding: 0 3.2rem;
 	align-items: center;
 }
@@ -933,7 +925,7 @@ POINT CARD SECTION
 .point-card-new-member-pointCard {
 	text-align: center;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 2rem;
 	padding: 3.2rem;
 	align-items: center;
 	max-width: 437px;
@@ -976,9 +968,8 @@ POINT CARD SECTION
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	border-radius: 3.2rem;
+	border-radius: 2rem;
 	flex: 1;
-	padding: 3.2rem 2.4rem;
 }
 
 @media (max-width: 1024px) {
@@ -992,7 +983,8 @@ POINT CARD SECTION
 	align-items: center;
 	gap: 2.4rem;
 	justify-content: center;
-	padding: 0 0 2.4rem 0;
+	/* padding: 0 0 2.4rem 0; */
+	padding: 3.2rem 2.4rem;
 }
 
 @media (max-width: 768px) {
