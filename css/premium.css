@@ -592,6 +592,7 @@ Q&A
 .faq-question-text {
     font-size: 1.6rem;
     font-weight: 700;
+    padding-right: .8rem;
 }
 @media (max-width: 768px) {
     .faq-question-text {
