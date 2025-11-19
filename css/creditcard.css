@@ -427,7 +427,7 @@ ul.check_list li::before {
   display: inline-block;
   background-color: #ca1528;
   color: #fff;
-  padding: 1.8rem 6.4rem;
+  padding: 1rem;
   text-decoration: none;
   border-radius: 0.8rem;
   font-size: 2rem;
@@ -435,12 +435,15 @@ ul.check_list li::before {
   transition: opacity 0.3s ease;
   border: 2px solid #ca1528;
   transition: all 0.3s ease;
+  width: 36.8rem;
+  height: 9rem;
 }
 
 @media (max-width: 768px) {
   .table-cta-button {
-    padding: 1.8rem 5.7rem;
     font-size: 1.8rem;
+    width: 33rem;
+    height: 8.6rem;
   }
 }
 
@@ -452,10 +455,6 @@ ul.check_list li::before {
 .table-cta-button .button-line1,
 .table-cta-button .button-line2 {
   display: block;
-}
-
-.table-cta-button .button-line1 {
-  margin-bottom: 0.4rem;
 }
 
 .table-cta-wrapper {
@@ -629,12 +628,12 @@ ul.check_list li::before {
 /* faq */
 .p-faq {
   position: relative;
-  padding: 0 0 6.4rem !important;
+  padding: 0 0 12rem !important;
 }
 
 @media (max-width: 768px) {
   .p-faq {
-    padding: 0 !important;
+    padding: 0 0 8rem !important;
   }
 }
 
