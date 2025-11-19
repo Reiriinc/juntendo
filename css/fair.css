@@ -157,7 +157,7 @@ HERO SECTION
 
 @media (max-width: 768px) {
   .p-fair-info-section {
-    padding: 12rem 2.4rem 8rem;
+    padding: 12rem 2.4rem 6.4rem;
   }
 }
 
@@ -187,7 +187,12 @@ HERO SECTION
 }
 
 .p-fair-store-list {
-  padding-bottom: 0;
+  padding-bottom: 12rem;
+}
+@media (max-width: 768px) {
+  .p-fair-store-list {
+    padding-bottom: 8rem;
+  }
 }
 .p-fair-store {
   color: #dd0c1f;
@@ -253,6 +258,7 @@ h3.p-fair-pref::before {
   line-height: 3.4rem;
   letter-spacing: 0.05rem;
   border-bottom: 1px solid #ededed;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -275,13 +281,14 @@ h3.p-fair-pref::before {
   background: url("../img/fair/icon_tel.svg") no-repeat center;
 }
 
-.view-more-btn {
-  min-width: 120px;
+.p-fair-store-list .view-more-btn {
+  max-width: 133px;
+  width: 100%;
   text-align: center;
   display: inline-block;
   border: 1px solid #dc2626;
   color: #dc2626;
-  padding: 1.1rem 1.2rem;
+  padding: 0.6rem 2.1rem;
   border-radius: 9999px;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -289,8 +296,17 @@ h3.p-fair-pref::before {
   transition: all 0.3s ease;
   white-space: nowrap;
 }
+
+.p-fair-store-list .view-more-btn:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .p-store .view-more-btn {
     margin-top: 0.8rem;
+    padding: 1rem;
+    width: 12rem;
+    height: 4rem;
   }
 }
