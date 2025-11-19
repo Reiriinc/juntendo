@@ -485,7 +485,8 @@ SECTION TITLE
 	line-height: 1.9rem;
 	color: #555555;
 	margin-left: 0.4rem;
-	margin-top: 14px;
+	margin-top: 18px;
+	font-weight: 500;
 }
 
 @media (max-width: 768px) {
