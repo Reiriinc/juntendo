@@ -528,7 +528,7 @@ STORE LIST SECTION
 }
 
 .store-name {
-	font-size: 1.6rem;
+	font-size: 2rem;
 	line-height: 2.2rem;
 	font-weight: 700;
 	color: #555555;
@@ -538,6 +538,7 @@ STORE LIST SECTION
 @media (max-width: 768px) {
 	.store-name {
 		margin-bottom: 1.6rem;
+		font-size: 1.6rem;
 	}
 }
 
@@ -594,6 +595,8 @@ STORE LIST SECTION
 @media (max-width: 768px) {
 	.store-info {
 		margin-bottom: 1.6rem;
+		font-size: 1.4rem;
+		line-height: 2rem;
 	}
 }
 

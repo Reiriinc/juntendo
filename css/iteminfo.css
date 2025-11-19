@@ -179,6 +179,7 @@ ITEM INFO SECTION
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 0.8rem;
+	margin-left: 2.4rem;
 }
 
 @media (max-width: 768px) {

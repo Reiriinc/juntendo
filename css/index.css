@@ -195,6 +195,7 @@ NEWS SECTIOM
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+	gap: 2.4rem;
 }
 
 @media (max-width: 768px) {
@@ -226,6 +227,12 @@ NEWS SECTIOM
 	gap: 1.2rem;
 	margin-bottom: 3.4rem;
 	margin-left: 6rem;
+}
+
+@media (max-width: 1024px) {
+	.news-filters {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -264,6 +271,12 @@ NEWS SECTIOM
 	display: flex;
 	flex-direction: column;
 	margin-left: 6rem;
+}
+
+@media (max-width: 1024px) {
+	.news-list {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -356,6 +369,10 @@ NEWS SECTIOM
 	max-width: 160px;
 	width: 100%;
 	height: max-content;
+}
+
+.news-btn {
+	width: 160px;
 }
 
 @media (max-width: 768px) {
@@ -772,10 +789,22 @@ POINT CARD SECTION
 
 @media (max-width: 768px) {
 	.point-card-header {
-		padding: 0 2rem;
+		padding: 0 0 0 2rem;
 		margin-bottom: 4rem;
 	}
 }
+
+.point-card-header-wrapper {
+	padding-left: 2.4rem;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.point-card-header-wrapper {
+		padding-left: 0;
+	}
+}
+
 
 @media (max-width: 768px) {
 	.point-card-header .section-title {
@@ -996,7 +1025,7 @@ POINT CARD SECTION
 
 .point-card-new-member-craditCard-item:last-of-type {
 	border-top: 1px solid #F1EDE7;
-	padding: 2.4rem 0 0 0;
+	padding: 3.2rem 2.4rem;
 }
 
 .point-card-new-member-craditCard-item p {
@@ -1027,7 +1056,7 @@ POINT CARD SECTION
 }
 
 .point-card-btn {
-	margin: 0.8rem auto 0;
+	margin: 0.8rem 0 0 auto;
 }
 
 /* ============================================
