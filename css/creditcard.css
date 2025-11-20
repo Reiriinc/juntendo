@@ -291,7 +291,8 @@ h3.card-title::before {
     flex-direction: column;
     gap: 1.8rem;
     padding: 3.2rem 2.4rem;
-    margin-right: 2.4rem;
+    margin-left: 2.4rem;
+	align-items: center;
   }
 }
 
@@ -684,8 +685,8 @@ ul.check_list li::before {
 
 @media (max-width: 1180px) {
   .faq::before {
-    width: 95%;
-    margin-left: 5%;
+    width: 97.5%;
+    margin-left: 2.5%;
   }
 }
 
