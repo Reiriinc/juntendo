@@ -166,6 +166,20 @@ HERO SECTION
   padding: 0;
 }
 
+@media (max-width: 768px) {
+.p-fair-info-header .section-title{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+}
+
+@media (max-width: 768px) {
+	.p-fair-info-header .title-ja{
+		margin-left: 3.2rem;
+	}
+	}
+
 .p-fair-banner {
   margin-top: 3.2rem;
 }
