@@ -382,6 +382,19 @@ STORE LIST SECTION
 	font-weight: 700;
 	color: #555555;
 	margin-bottom: 1.6rem;
+	padding-left: 2.8rem;
+	position: relative;
+}
+
+.p-shop-info-prefecture-title::before {
+	content: "";
+	position: absolute;
+	top: 54%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	background: url("../img/shopinfo/img-location.svg") no-repeat center center / contain;
 }
 
 @media (max-width: 768px) {
@@ -416,31 +429,25 @@ STORE LIST SECTION
 	}
 }
 
-
-@media (max-width: 390px) {
-	.p-shop-info-prefecture-buttons {
-		gap: 1.2rem 0.8rem;
-	}
-}
-
 .p-shop-info-prefecture-btn {
 	background-color: white;
-	max-width: 100px;
+	max-width: 158px;
 	width: 100%;
 	color: #555555;
-	height: 40px;
-	padding: 0.8rem 0.9rem;
+	height: 60px;
+	padding: 0.8rem 2.8rem 0.8rem 0.9rem;
 	border-radius: 0.8rem;
 	font-size: 1.4rem;
 	line-height: 1.9rem;
 	font-weight: 500;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	position: relative;
 }
 
 @media (max-width: 768px) {
 	.p-shop-info-prefecture-btn {
-		max-width: 96px;
+		max-width: calc(100% / 2 - 0.8rem);
 		width: 100%;
 		height: 48px;
 	}
@@ -454,6 +461,21 @@ STORE LIST SECTION
 	background-color: #dc2626;
 	color: white;
 	border-color: #dc2626;
+}
+
+.p-shop-info-prefecture-btn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 1.2rem;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background: url("../img/shopinfo/img-check.svg") no-repeat center center / contain;
+}
+
+.js-prefecture-btn.active::after {
+	background-image: url("../img/shopinfo/img-check-active.svg");
 }
 
 .map-container {

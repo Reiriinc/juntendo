@@ -47,41 +47,43 @@ $(document).ready(function() {
 
 
 
-    const upperSwiper = new Swiper('.upper-swiper', {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-        centeredSlides: false,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        breakpoints: {
-            320: { slidesPerView: 1, spaceBetween: 0 },
-            768: { slidesPerView: 1.17, spaceBetween: 24 },
-            1024: { slidesPerView: 1.17, spaceBetween: 24 },
-            1920: { slidesPerView: 1.17, spaceBetween: 24 }
-        }
-    });
+    if (typeof Swiper !== 'undefined') {
+        const upperSwiper = new Swiper('.upper-swiper', {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            centeredSlides: false,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 0 },
+                768: { slidesPerView: 1.17, spaceBetween: 24 },
+                1024: { slidesPerView: 1.17, spaceBetween: 24 },
+                1920: { slidesPerView: 1.17, spaceBetween: 24 }
+            }
+        });
 
-    const lowerSwiper = new Swiper('.lower-swiper', {
-        slidesPerView: 3,
-        spaceBetween: 15,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-        breakpoints: {
-            320: { slidesPerView: 1, spaceBetween: 0 },
-            768: { slidesPerView: 3, spaceBetween: 16 },
-            1024: { slidesPerView: 3, spaceBetween: 16 }
-        }
-    });
+        const lowerSwiper = new Swiper('.lower-swiper', {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 0 },
+                768: { slidesPerView: 3, spaceBetween: 16 },
+                1024: { slidesPerView: 3, spaceBetween: 16 }
+            }
+        });
+    }
 
 
     let currentFilter = '全て';
