@@ -184,6 +184,10 @@ ITEM INFO SECTION
 	padding: 0!important;
 }
 
+.section-title-wrapper.-first{
+	margin: 0!important;
+}
+
 .p-item-info-header {
 	display: flex;
 	align-items: center;
@@ -200,7 +204,7 @@ ITEM INFO SECTION
 @media (max-width: 768px) {
 	.p-item-info-header {
 		margin-bottom:3.2rem;
-		margin-bottom: 4rem;
+		margin-bottom: 2.4rem;
 	}
 }
 
@@ -237,6 +241,12 @@ ITEM INFO SECTION
         flex-direction: column;
         gap: 0;
         align-items: flex-start;
+	}
+}
+
+@media (max-width: 1024px) {
+	.p-item-info-header .section-title .title-en{
+		letter-spacing: 0.35rem;
 	}
 }
 
@@ -745,7 +755,7 @@ RECOMMENDATION LIST
 
 @media (max-width: 768px) {
 	.p-item-info-recommendation-wrapper {
-		padding: 6.4rem 0;
+		padding: 3.2rem 0 6.4rem;
 	}
 }
 
@@ -754,7 +764,6 @@ RECOMMENDATION LIST
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	gap: 3.2rem;
-	padding: 0.8rem 0;
 	max-width: 1024px;
 	margin: 0 auto;
 }
