@@ -303,7 +303,6 @@ PAGE COMMON
     display: flex;
     align-content: center;
     justify-content: center;
-    column-gap: 4.5rem;
 }
 @media (max-width: 768px) {
     .p-corporate-cta-wrapper  {
@@ -331,9 +330,6 @@ PAGE COMMON
         padding: 1.8rem 0;
         font-size: 1.8rem;
         width: 100%;
-    }
-    .p-corporate-cta-button + .p-corporate-cta-button {
-        margin-top: 2.4rem;
     }
 }
 
@@ -710,7 +706,6 @@ BIZカード
 @media (max-width: 768px) {
     .p-corporate-other-card-table tr td:nth-of-type(2) {
         width: calc(130/350*100%);
-
     }
 }
 
@@ -763,13 +758,59 @@ BIZカード
     }
 }
 
-.p-corporate-other-card-cta .p-corporate-cta-button {
-    width: 356px;
-    padding-left: 0;
-    padding-right: 0;
+.p-corporate-other-card-cta:before  {
+    content: '';
+    display: block;
+    width: calc(236/1024*100%);
 }
 @media (max-width: 768px) {
+    .p-corporate-other-card-cta:before  {
+        content: none;
+    }
+}
+
+.p-corporate-cta-button-wrapper:nth-child(1) {
+    width: calc(430/1024*100%);
+    padding: 0 2.2rem;
+}
+@media (max-width: 880px) {
+    .p-corporate-cta-button-wrapper:nth-child(1) {
+        padding: 0 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .p-corporate-cta-button-wrapper:nth-child(1) {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.p-corporate-cta-button-wrapper:nth-child(2) {
+    width: calc(358/1024*100%);
+}
+@media (max-width: 768px) {
+    .p-corporate-cta-button-wrapper:nth-child(2) {
+        width: 100%;
+        margin-top: 2.4rem;
+    }
+}
+
+.p-corporate-other-card-cta .p-corporate-cta-button {
+    max-width: 356px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 880px) {
     .p-corporate-other-card-cta .p-corporate-cta-button {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .p-corporate-other-card-cta .p-corporate-cta-button {
+        max-width: initial;
         width: 100%;
     }
 }
