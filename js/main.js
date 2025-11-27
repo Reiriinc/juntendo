@@ -184,8 +184,13 @@ $(document).ready(function() {
         if (href !== '#' && $(href).length) {
             e.preventDefault();
 
+            const headerHeight = $('.header').outerHeight() || 72; // 想定ヘッダー高さ
+            const targetTop = $(href).offset().top - headerHeight;
+            const maxScroll = $(document).height() - $(window).height();
+            const finalTop = Math.max(0, Math.min(targetTop, maxScroll));
+
             $('html, body').animate({
-                scrollTop: $(href).offset().top - 80
+                scrollTop: finalTop
             }, 600);
         }
     });
@@ -241,6 +246,21 @@ $(document).ready(function() {
             $('.header').addClass('scrolled');
         } else {
             $('.header').removeClass('scrolled');
+        }
+    });
+
+    // ページ読み込み時にハッシュ付きURL（例: /#about）でアクセスされた場合のスクロール補正
+    // 他ページから /#about などで飛んできたときも、ヘッダー高さぶんだけ引いた位置に合わせる
+    $(window).on('load', function() {
+        const initialHash = window.location.hash;
+        if (initialHash && $(initialHash).length) {
+            const $target = $(initialHash);
+            const headerHeight = $('.header').outerHeight() || 72; // 想定ヘッダー高さ
+            const targetTop = $target.offset().top - headerHeight;
+            const maxScroll = $(document).height() - $(window).height();
+            const finalTop = Math.max(0, Math.min(targetTop, maxScroll));
+
+            $('html, body').scrollTop(finalTop);
         }
     });
 

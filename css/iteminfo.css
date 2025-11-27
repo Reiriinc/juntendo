@@ -184,8 +184,10 @@ ITEM INFO SECTION
 	padding: 0!important;
 }
 
+@media (max-width: 768px) {
 .section-title-wrapper.-first{
-	margin: 0!important;
+	margin: 0 auto 0!important;
+}
 }
 
 .p-item-info-header {
@@ -246,7 +248,7 @@ ITEM INFO SECTION
 
 @media (max-width: 1024px) {
 	.p-item-info-header .section-title .title-en{
-		letter-spacing: 0.35rem;
+		letter-spacing: 0.2rem;
 	}
 }
 

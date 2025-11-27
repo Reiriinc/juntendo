@@ -369,6 +369,7 @@ NEWS SECTIOM
 	max-width: 160px;
 	width: 100%;
 	height: max-content;
+	text-align: center;
 }
 
 .news-btn {
@@ -1341,5 +1342,15 @@ Swiper CUSTOMIZE
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+}
+
+@media (max-width: 768px) {
+	.c-button-center{
+		margin-right: 0;
+	}
+
+	.c-button-center.-spRight{
+		margin-right: 2rem;
 	}
 }
