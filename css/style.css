@@ -252,6 +252,11 @@ HEADER
 	z-index: 10002;
 }
 
+.logo-footer {
+	position: relative;
+	z-index: 10;
+}
+
 /* ナビゲーション */
 
 .nav-desktop {
