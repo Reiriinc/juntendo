@@ -1,5 +1,5 @@
 // 差し替えが必要
-const apiKey = "AIzaSyAkVKUlEPi_h4oF8KzY1eX8sfor4e7vza4"; // ← あなたのAPIキーをここに入れる
+const apiKey = "AIzaSyB9vodCntBd2FXwB1uvxMVoivw09U-0R4Y"; // ← あなたのAPIキーをここに入れる
 const channelId = "UCCkcNNVdspO3gQvVC4I8uIg"; // 暮らしいきいきジュンテンドーのチャンネルID
 
 async function loadLatestVideo() {
