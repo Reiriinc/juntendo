@@ -299,7 +299,12 @@ PAGE COMMON
     }
 }
 
-.p-shopinfo-filter-list-item {
+.p-shopinfo-filter-list-item{
+    max-width: 160px;
+    width: 100%;
+}
+
+.p-shopinfo-filter-list-item a {
     text-align: center;
     padding: 1.1rem 0.8rem;
     border-radius: 24px;
@@ -309,14 +314,14 @@ PAGE COMMON
     transition: .3s ease;
     background-color: white;
     color: #555555;
-    max-width: 160px;
     width: 100%;
     border: 1px solid #9D9D9D;
     cursor: pointer;
+	display: block;
 }
 
 
-.p-shopinfo-filter-list-item.active {
+.p-shopinfo-filter-list-item.active a {
     background: var(--color-red);
     border-color: var(--color-red);
     color: #fff;
